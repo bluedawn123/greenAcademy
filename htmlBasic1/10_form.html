@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>회원가입</h1>
+    <form action="#">
+        <fieldset>
+            <legend>필수입력</legend>
+            <p>
+                <label for="username">이름 : </label> 
+                <input type="text" id="username" name="username" minlength="2" required placeholder="실명으로 입력하시오" autofocus>
+            </p>
+            <p>
+                <label for="useremail1">이메일1 : </label>
+                <input type="email" id="useremail1" name="useremail1" required>
+            </p>
+            <p>
+                <label for="pw">비밀번호: </label> 
+                <input type="password" id="pw" name="pw" minlength="2" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>부가입력</legend>
+            <p>
+                <label for="birth">생년월일</label>
+                <input type="date" id="birth" name="birth" placeholder="">
+            </p>
+            <p>
+                <label for="address">거주지</label>
+                <select name="address" id="address">
+                    <option value="서울">서울</option>
+                    <option value="경기">경기</option>
+                    <option value="인천">인천</option>
+                </select>
+            </p>
+            <p>
+                <span>결혼여부</span>
+                <label for="marriaged">기혼</label>
+                <input type="radio" id="marriaged" name="marriage" value="기혼">
+
+                <label for="notmarriaged">미혼</label>
+                <input type="radio" id="notmarriaged" name="marriage" value="미혼">
+                <!-- name에 같은 이유는 둘중하나 선택하는 사항인데 같아야 하나의 결과로 db에 보낼수 있기 때문 -->
+            </p>
+            <p>
+                <span>취미</span>
+                <label for="sports">운동</label>   
+                <input type="checkbox" id="sports" name="hobby">
+                <label for="game">게임</label>   
+                <input type="checkbox" id="game" name="hobby">
+                <label for="reading">독서</label>   
+                <input type="checkbox" id="reading" name="hobby">
+                <!--역시 name이 하나인 것은 하나로 디비에 들어가기 때문-->
+            </p>
+            <p>
+                <label for="profile">프로필 이미지</label>
+                <input type="file" id="profile">
+            </p>
+            <p>
+                <label for="greeting">인사말</label>
+                <textarea name="greeting" id="greeting" cols="10" rows="5"></textarea>
+            </p>
+
+        </fieldset>
+
+
+
+
+
+        <button>전송</button>
+
+
+
+
+        <!-- 위 아래의 차이?? 
+        <hr>
+        <label for="useremail2">
+            이메일2 : <input type="email" id="useremail2" required>
+        </label>     -->
+    </form>
+
+    <!-- 아래는 금지 
+    <label> 이메일
+        <input type="text">   
+    </label> -->
+</body>
+
+</html>
