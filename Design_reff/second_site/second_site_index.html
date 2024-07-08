@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
     <title>Quill</title>
 </head>
 <body>
@@ -32,16 +33,43 @@
             <div>
                 <label for="submit"></label>
                 <input type="submit" name="submit" value="GET NOTICED" />
-                <!-- 혹은
+                <!-- <input type="image" name="submit" src="images/send.png" alt="" /> -->
+                <!--혹은 
                 <button type="submit">GET NOTICED</button> 
+                <button type="submit"><img src="images/send.png"></img></button>  
                 -->
             </div>
-
         </form>
-        <section class="progress container"></section>
-        <section class="freebie container"></section>
-    </main>
-    <footer></footer>
 
+        <section class="progress container">
+            <h2 class="sec-tt">Status Report</h2>
+            <div class="progress-box">
+                <div class="progress-bar">progress bar</div>
+                <div class="content">
+                    <h3>45%</h3>
+                    <p>Just finished the blog design, not I’m designing the portfolio pages.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="freebie container">
+            <h2 class="sec-tt">Did I Hear... Freebie?</h2>
+            <p>
+                Yes you did. We’ll give a free landing page template to everyone who signs up using the form at the <strong>top</strong>.
+            </p>
+            <img src="images/Placeholder.png" alt="placeholder">
+        </section>
+    </main>
+    <footer>
+        <p>You can get in touch by sending us an <a href="mailto:master@quill.com">email</a> or via social networks.</p>
+        <p>
+            <a href="" class="btn primary"><i class="fa-brands fa-twitter"></i></a>
+            <a href="" class="btn primary"><i class="fa-brands fa-facebook"></i></a>
+        </p>
+        <p>
+            &copy; Quill 2020.
+        </p>
+    </footer>
+    <a href="#" class="back-to-top btn"><i class="fa-solid fa-up-long"></i></a>
 </body>
 </html>
