@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow">
+    <title>오디오 비디오 구현</title>
+</head>
+
+<body>
+    <h1>Media</h1>
+    <h2>Image</h2>
+    <figure>
+        <img src="images/vivaldi.jpg" alt="vivaldi">
+        <figcaption>vivaldi Summersss</figcaption>
+    </figure>
+    <h2>video</h2>
+    <video src="video/vivaldi.mp4"  muted controls loop autoplay preload="auto" poster="images/vivaldi.jpg"></video>
+    <hr>
+    <video controls>
+        <!-- 이중 하나만 나옴. -->
+        <source src="video/vivaldi.mp4" type="video/mp4">
+        <source src="video/vivaldi.mp4" type="video/webm">
+        <source src="video/vivaldi.mp4" type="video/ogv">  
+        <p>mp3 지원 xxxxxxxxxxx</p> <!--비디오가 나오면 이건 나오지않음. 상황에 따라 나오냐 안나오냐하는 것을 fallback contents 라고함-->
+    </video>
+    <h2>Cloudinary</h2>
+    <video src="https://res.cloudinary.com/dy94gcke4/video/upload/v1720401345/vivaldi_xcutgx.mp4" controls></video>
+
+    <h2>youtube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zzE-kVadtNw?si=qA2DjCftbzUYUDP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>></video>
+
+    <h2>vimeo</h2>
+    <iframe src="https://player.vimeo.com/video/440193219?h=cb45d17538&autoplay=1&loop=1&title=0&byline=0&portrait=0"
+    width="650" height="360" frameborder="0">vimeo 넣어보기</iframe>
+
+    <h2>audio</h2>
+    <audio src="audio/Honey_Bee_01_web.mp3" controls></audio>
+    <audio>
+        <source src="audio/Honey_Bee_01_web.mp3" type="audio/mp3">
+        <source src="audio/Honey_Bee_01_web.mp3" type="audio/ogg">
+        <p>오디오를 지원하지 않습니다. </p>  <!--fallback contents-->
+    </audio>
+
+</body>
+
+</html>
