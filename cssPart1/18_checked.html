@@ -11,13 +11,14 @@
             color: red;
         }
 
-        /* 인풋의 속성이 라디오인것만 체크가 되면 그 이하의 label을 {}처럼 바꿔보자. */
-        input:nth-child(1)[type=radio]:checked + label{
+        /* 인풋의 속성이 라디오인것만 체크가 되면 그 이하의 label을 {}처럼 바꿔보자.
+            사실 없어도 무방하다.  */
+        input[type="radio"]:first-child:checked + label{
             background: green;
             color: #fff;
         }
         /* 왜안됌??? */
-        input:nth-child(2)[type=radio]:checked + label{
+        input[type="radio"]:nth-child(3):checked + label{
             background: red;
             color: #8a2929;
         }
