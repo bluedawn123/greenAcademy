@@ -4,9 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/02_style.css">
     <title>color</title>
     <style>
-
+			h2{color: blue;}
+			h3{
+				color: aqua;
+				background-color: #0000ff;
+			}
+			h4{
+				background-color: rgb(0,0,255);
+				color: rgb(255,255,255);
+			}
+			h5{
+				background-color: rgba(0,0,255, 0.5);
+				color: rgba(255,255,255,1);
+			}
+			h6{
+				background-color: hsla(240, 100%, 50%, 0.5);
+				color: #000;
+			}
+			.box1{
+				background-color: rgba(0,0,255,0.3); /*배경만 투명도를 30퍼 줌*/
+				color: #000;
+			}
+			.box2{
+				background-color: rgba(0,0,255);
+				color: #000;
+				opacity: 0.3; /*전체다 투명도를 줘서 글씨까지 영향이 받는다. */
+			}
     </style>
 </head>
 
@@ -17,6 +43,21 @@
     <h4>rgb color</h4>
     <h5>rgba color</h5>
     <h6>hls color</h6>
+		<hr>
+		<div class="box1">
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+				Aut sit atque necessitatibus, libero nam est numquam mollitia debitis non nulla eius dolor consequuntur inventore. 
+				Accusantium provident facilis ad cupiditate fugiat.
+			</p>
+		</div>
+		<div class="box2">
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+				Aut sit atque necessitatibus, libero nam est numquam mollitia debitis non nulla eius dolor consequuntur inventore. 
+				Accusantium provident facilis ad cupiditate fugiat.
+			</p>
+		</div>
 </body>
 
 </html>

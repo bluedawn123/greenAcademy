@@ -7,13 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attribute - CSS Selector</title>
     <style>
+        [target]{
+            text-decoration: none;
+        }
+        [target = "_blank"]{
+            background-color: red;;
+        }
+        [class ^= "inner"]{  /*이너로 시작하는것*/
+            font-weight: bold;
+        }
 
     </style>
 </head>
 
 <body>
     <p>
-        <a href="" class="inner_sm">link</a>
+        <a href="" class="sm">link1</a>
+        <a href="" class="inner_sm">link2</a>
         <a href="" target="_blank">naver</a>
         <a href="" target="_blank">daum</a>
         <a href="" target="_self" class="inner_big">google</a>

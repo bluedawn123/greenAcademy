@@ -7,6 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit</title>
     <style>
+        :root{
+            font-size: 10px;
+        }
+        body{
+            background-color: aqua;
+            width: 800px;
+            font-size: 30px;
+        }
+        .px{
+            width: 300px;
+            background-color: green;
+        }
+        .parent{
+            width: 50%; 
+            /* %는 부모가 만든 공간에서의 비율 부모가 700이므로 여기선400px*/
+            background-color: #ccc;
+        }
+        .child{
+            background-color: green;
+            width: 50%;  /*800의 반의 반이므로, 200px*/
+        }
+        section{
+            width: 20em;
+            background-color: pink;
+            font-size: 20px;
+        }
+        section p {
+            font-size: 50%;
+            /* 폰트사이즈의 100%는 16px이 기본이다. */
+            color: red;
+        }
+
+        aside p{
+            font-size: 2rem;
+        }
 
     </style>
 </head>
@@ -26,8 +61,10 @@
         officia obcaecati.
     </p>
     <section>
+        test 얘는 20px
         <h2>section title</h2>
         <p>
+            section의 0.5em이므로 font-size는 10px<br>
             Lorem ipsum dolor sit amet <strong>consectetur</strong>, adipisicing elit. Laboriosam esse eius harum vel
             praesentium, laborum quasi, tenetur sapiente velit repudiandae, excepturi odit itaque suscipit et quidem
             consequuntur odio consectetur. Soluta!

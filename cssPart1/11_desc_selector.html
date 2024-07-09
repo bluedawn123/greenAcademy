@@ -7,6 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descendent and child Selector</title>
     <style>
+        a{text-decoration: none;}
+        header .title{
+            background-color: red;
+        }
+        nav ul ul a {
+            background-color: silver;
+        }
+
+        nav > ul > li > a {
+            text-decoration: underline;
+        }
+        
 
     </style>
 </head>
@@ -16,20 +28,31 @@
         <h1 class="title">Logo</h1>
         <nav>
             <ul>
-                <li><a href="">menu</a>
+                <li><a href="">menuss</a>
                     <ul>
-                        <li><a href="">sub menu</a></li>
-                        <li><a href="">sub menu</a></li>
+                        <li><a href="">sub menu</a></li> <!--얘만 실버로-->
+                        <li><a href="">sub menu</a></li> <!--얘만 실버로-->
                     </ul>
                 </li>
-                <li><a href="">menu</a></li>
-                <li><a href="">menu</a></li>
+                <li><a href="">menuss</a></li>
+                <li><a href="">menuss</a></li>
             </ul>
         </nav>
     </header>
     <section>
         <h1 class="title">Main section</h1>
+        <ul>
+            <li><a href="">menu</a>
+                <ul>
+                    <li><a href="">sub menu</a></li>
+                    <li><a href="">sub menu</a></li>
+                </ul>
+            </li>
+            <li><a href="">menu</a></li>
+            <li><a href="">menu</a></li>
+        </ul>
     </section>
+
 
 </body>
 

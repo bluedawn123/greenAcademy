@@ -8,9 +8,24 @@
     <title>Pseudo-element Selector</title>
     <style>
 
+        h2:before{
+            content: '-';
+        }
+        h2:after{
+            content: 'x';
+        }
+
+        h1:before{
+            content:'';
+            width: 10px;   
+            height: 10px;
+            background-color: red;  
+            display: inline-block;
+        }
+
     </style>
 </head>
-
+<!-- 가상 선택요소. 콘텐츠의 특정한 자리를 사용할때 사용 -->
 <body>
     <h1>Pseudo-element Selector</h1>
     <h2>content</h2>

@@ -7,16 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universal Selector</title>
     <style>
+        header *{
+            color: blue;
+        }
+        header a, p{   /*이렇게 따로 지정해주면 * 보다 우선순위
+            질문. 근데 header 의 자식의 p인데 왜 다른 p까지 적용이 됌?  >을 사용해야함?
+
+            */
+            color: red;
+        }
 
     </style>
 </head>
 
 <body>
-    <h1>Heading 1</h1>
+    <header>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <p>Lorem, ipsum <em>dolor</em> sit amet consectetur adipisicing elit. Magnam quisquam repellendus, velit impedit eaque
+            adipisci eligendi! Doloribus enim eius architecto a earum non nisi tempora cupiditate esse, blanditiis dolore.
+            Facilis.
+        </p>
+        <a href="">daum</a>
+    </header>
+
     <h2>Heading 2</h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam quisquam repellendus, velit impedit eaque
         adipisci eligendi! Doloribus enim eius architecto a earum non nisi tempora cupiditate esse, blanditiis dolore.
-        Facilis.</p>
+        Facilis.
+    </p>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>viewport unit</title>
     <style>
+/* 질문. html과 body가 크기가 다른 이유? 어쩔수없
+   질문. 그렇다면, 이렇게 만들었을때 body의 기본 높이값은 얼마로 설정되어 있음? 
+   질문. body는 크기를 지정한다고 왜 바뀌지 않음?
+*/
+        
+        .parent{
+            background-color: #831414;
+            height: 100vh;
+        }
+        
+        .child{
+            width: 50%;  /*부모기준*/
+            background-color: green;
+        }
+        .child2{
+            width: 50vw;  /*뷰포트 기준. 스크롤바 까지 기준*/
+            background-color: green;
+        }
+        h1{
+            font-size: 10vw;
+        }
 
     </style>
 </head>
@@ -20,6 +41,63 @@
         <div class="child">Percent</div>
         <div class="child2">vw</div>
     </div>
+    <!-- <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi quis pariatur officiis, 
+        sed veniam impedit animi, rem accusantium magnam commodi labore necessitatibus consectetur obcaecati perferendis aliquam sequi. Placeat, quod!
+    </p> -->
+
 </body>
 
 </html>
