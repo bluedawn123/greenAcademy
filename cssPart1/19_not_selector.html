@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>부정 선택자</title>
     <style>
+        header :not(h1){
+            color : green;
+        }
+
+        /* 띄어쓰면 자식, 붙여쓰면? */
+        ul li:not(:first-child){  
+            background-color: red;
+        }
 
     </style>
 </head>
