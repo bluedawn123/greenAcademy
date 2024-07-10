@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>background attachment</title>
     <style>
-        .height {
-            height: 1500px;
-        }
-
+        .height {height: 1500px;}
         .bg {
             background-image: url('img/bg.png');
             background-repeat: no-repeat;
-
             height: 900px;
+            /* background-attachment: scroll; 기본값은 scroll이다. 넘어간다! */
+            background-attachment: fixed;    /*이미지 고정*/
         }
+
+
     </style>
 </head>
 

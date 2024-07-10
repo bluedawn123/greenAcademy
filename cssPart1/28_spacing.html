@@ -7,7 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>글의 간격</title>
     <style>
+        h2{letter-spacing: 10px;}  /*글자 사이의 간격*/
+        h3{word-spacing: 20px;}  /*각 단어 사이의 간격*/
+        p{line-height: 100px;  /*글씨의 크기와는 별개로 글씨의 높낮이라고 보면 된다.*/
+          font-size: 30px;      /*정확히 폰트사이즈는 각 글자의 크기를 의미(젤 위~젤아래)*/
+        }   
 
+        a{
+            width: 100px; height: 50px; background-color: blue; color:aliceblue;
+            display: inline-block; text-align: center;
+            line-height: 50px;
+        }  
     </style>
 </head>
 
@@ -15,9 +25,11 @@
     <h1>글의 간격</h1>
     <h2>letter spacing</h2>
     <h3>word spacing</h3>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus voluptatum exercitationem voluptatibus
-        ratione corporis atque odit deserunt fuga repellat obcaecati veritatis quo aut illum officiis rerum, earum
-        similique molestias reprehenderit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing eamet consectetur, adipisicing eamet consectetur, adipisicing eamet consectetur, adipisicing e</p>
+    <a href="">Buy Now</a>
+    <!-- 왜 line-height를 주면 정렬이 될까?
+     https://www.codeit.kr/community/questions/UXVlc3Rpb246NWUzNDUyMjU4MGU1MTMzNzNkOTYyNDFi 참조
+      -->
 
 </body>
 

@@ -9,15 +9,27 @@
     <title>CSS 기본문법</title>
 
     <style>
-
+        /* 왜 부모에 text-align을 줘야 정렬이 됌? => 기준점이 부모가 되기 떄문이다. inline속성만으로는 뭐가 기준인지 모르자너 */
+        nav a{
+          text-align: center;
+          font-size: 20px;
+          color: black;
+        }
     </style>
 </head>
 
 <body>
-    <h1>CSS 기본문법</h1>
-    <p style="color: green;">cascade style sheet 스타일을 지정한다.</p>
-    <h2>heading</h2>
+    <nav>
+        <a href="#">One</a> <!-- a태그는 inline요소 이다 -->
+        <a href="#">Two</a>
+        <a href="#">Three</a>
+        <a href="#">Four</a>
+    </nav>
 
 </body>
 
 </html>
+
+
+  
+  

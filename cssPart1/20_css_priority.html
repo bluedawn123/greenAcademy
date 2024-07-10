@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css priority</title>
     <style>
+        section p{color: blue;}
+        section p{color: black;}
+        p{color: red;}
+        p{color: green;}
+
+        #desc{color: aqua;}
+        .desc{text-decoration: underline;}
+        #desc{text-decoration: none;}
+
 
     </style>
 </head>
@@ -13,7 +22,7 @@
     <h1>CSS 우선순위</h1>
     <section class="main-content">
         <h2>section title</h2>
-        <p id="desc">
+        <p id="desc" class="desc" style="color: blue;">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quas perspiciatis, nobis hic quo tempore, iusto esse culpa consequuntur exercitationem, officiis enim iure. Excepturi voluptate, expedita dolor eaque quidem cumque.
         </p>
         <p>

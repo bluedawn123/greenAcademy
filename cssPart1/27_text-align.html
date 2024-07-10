@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,19 @@
             margin: 0 auto;
             border: 1px solid;
         }
+        .right{text-align: right;}.left{text-align: left;}.center{text-align: center;}
+        .justify{
+            text-align: justify; /*옆에 꽉 채우기*/
+            word-break: break-all;
+        } 
+        .span {
+            display: block;
+            text-align: right;
+        }
+        .link {
+            text-align: center;
+        }
+
     </style>
 </head>
 
@@ -26,6 +39,13 @@
     <p class="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia praesentium in saepe cupiditate
         modi voluptates explicabo, excepturi sint? Vel autem, optio natus labore officia dignissimos eaque dolore
         assumenda nisi beatae?</p>
+    <hr>
+    <span class="span">align</span>
+    <p class="link">
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+    </p>
 
 </body>
 

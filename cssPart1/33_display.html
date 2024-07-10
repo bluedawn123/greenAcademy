@@ -7,9 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display</title>
     <style>
-        span {
+        span {  /*inline요소!! 크기,넓이를 모르므로 display 변경*/
             background: green;
             color: #fff;
+            width: 300px;
+            display: block;
+        }
+
+        .box{
+            width: 300px;
+            background-color: silver;
+        }
+        img{  /*inline-block요소. 글자의 요소가 있어서 text-align 센터가 가능하다.*/
+            width: 200px;
+        }
+        p, .menu{
+            text-align: center;
+        }
+        .menu li{
+            display: inline;
         }
     </style>
 </head>
@@ -27,8 +43,10 @@
     <span>inline level element</span>
     <span>inline level element</span>
     <hr>
-    <img src="https://via.placeholder.com/100" alt="">
-    <img src="https://via.placeholder.com/100" alt="">
+    <p>
+        <img src="https://via.placeholder.com/100" alt="">
+        <img src="https://via.placeholder.com/100" alt="">
+    </p>
     <hr>
     <ul class="menu">
         <li>menu1</li>

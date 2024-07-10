@@ -10,9 +10,29 @@
         .bg {
             width: 400px;
             height: 300px;
+            /* background-color: red;
             background-image: url('img/bg.png');
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; 아래서 하나로 합치기*/
+            background: green url('img/bg.png') no-repeat 0 0 / 100px 100px;  /*뒤 숫자는 포지션, 사이즈*/
             border: 1px solid;
+        }
+        .size1{
+            background-size: 200px;
+        }
+        .size2{
+            background-size: 100%;
+        }
+        .full{
+            background-size: 100% 100%;  /*역시 가로 세로*/
+        }
+        .contain{
+            background-size: contain;  /*가로,세로중 짧은 축에 맞춰줌. 공백이 생길 수 있다.*/
+        }
+        .cover{  
+            background-size: cover;  /*가로 축에 맞추고 줄어 들어 공백이 생길거같아도 안생김.*/
+        }
+        .fluid{
+            width: 50%;
         }
     </style>
 </head>
