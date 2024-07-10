@@ -11,16 +11,49 @@
             width: 860px;
             margin: 0 auto;
             padding: 10px;
-            background: #ebebeb;
+            background: green;
+        }
+        .portfolio_list li{
+            margin-right : 20px;
+            float: left;
+            list-style: none;
+        }
+        .portfolio_list li:last-child{margin-right: 0px;}  /*last-of-type을 써도됌*/
+
+        nav li{
+            list-style: none;
+            float: left;
+        }
+        nav ul:after{
+            content: ''; clear: left; display: block;
         }
 
+        .cf:after{  /*자주쓰이므로 class화 해서 필요한 곳에다 갖다씀. */
+            content: ''; clear: left; display: block;
+        }
+/*
+        nav ul:after{
+            content: ''; clear: left; display: block;
+        }
+        .portfolio_list:after{
+            content: ''; clear: left; display: block; inline -> block
+        }*/
 
     </style>
 </head>
 
 <body>
     <h1>Portfolio List</h1>
-    <ul class="portfolio_list">
+    <nav>
+        <ul class="cf">
+            <li><a href="">menu1</a></li>
+            <li><a href="">menu2</a></li>
+            <li><a href="">menu3</a></li>
+            <li><a href="">menu4</a></li>
+        </ul>
+    </nav>
+
+    <ul class="portfolio_list cf">
         <li>
             <img src="https://via.placeholder.com/200" alt="">
         </li>
@@ -34,6 +67,7 @@
             <img src="https://via.placeholder.com/200" alt="">
         </li>
     </ul>
+
 
 
 

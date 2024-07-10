@@ -8,8 +8,29 @@
     <title>Box Model</title>
     <style>
         .box {
+            width: 500px; 
+            /*
+            padding: 50px;  
+            border-width: 20px 10px 5px 30px;
+            border-style: solid dotted dashed solid;
+            border-color: red;
+            수치
+            1개.  상하좌우
+            2개.  상하 좌우
+            3개.  상 좌우 하
+            4개.  상 하 좌 우
+            
+            margin: 50px 30px 100px 20px;   */
+
+            padding-left: 50px;
+            border-right: 155px solid red;
+            margin-bottom: 150px;
+
+        }
+
+        .container{
             width: 500px;
-            padding: 20px;
+            margin: 5px auto;   /*가운데 정렬. 마진을 모두 0000주고 auto로*/
         }
     </style>
 </head>
@@ -20,7 +41,17 @@
     <div class="box">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed aspernatur reprehenderit blanditiis velit
             consectetur quibusdam, debitis similique earum cupiditate numquam! Enim, saepe. Aliquid veritatis ex eaque
-            voluptatibus earum. Repellat, non.</p>
+            voluptatibus earum. Repellat, non.
+        </p>
+        <p>title</p>
+    </div>
+    <hr>
+
+    <div class="container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            A ratione, hic dicta illum architecto iste nihil odit molestias amet provident nemo 
+            incidunt molestiae sequi inventore vero aliquam eveniet aliquid delectus?
+        </p>
     </div>
 
 
