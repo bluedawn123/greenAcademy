@@ -1,0 +1,29 @@
+*{margin: 0; padding: 0;
+box-sizing: border-box;}
+body{font-size: 20px;}
+
+/*header와 메인 첫번째 자식들만 선택 + footer */
+header > *, main > *, footer{
+    padding: 10px;
+    background: #ebebeb;
+}  
+
+body{ width: 960px; margin: 0 auto;}
+header, main{margin-bottom:40px; }
+
+header .logo, header nav{
+    margin-bottom: 20px;
+}
+
+main aside{
+    width: 300px;
+    float:left;
+    background-color: red;
+}
+main .content{
+    width: 620px;
+    float:right;
+    background-color: green;
+}
+
+main:after{content:''; display: block; clear:both;}

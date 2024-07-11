@@ -1,0 +1,50 @@
+*{margin: 0; padding:0; }
+li{list-style: none;}
+.slidewrapper{
+    background: #ebebeb;
+}
+.pager a {
+    width: 10px; height: 10px;
+    background: #000;
+    display: inline-block; /*텍스트 성격을 줌*/
+    text-indent: -9999em;
+    border-radius: 50%;
+}
+
+.wrapper{
+    width:960px; 
+    margin: 0 auto;
+}
+
+.slidewrapper{
+    height: 500px;
+    position: relative;
+}
+
+.slidewrapper button{
+    position: absolute;
+    height: 40px; padding: 0 10px;
+    background: black; color: white;
+    top : calc(50% - 20px);
+}
+
+#prev{
+    left : 10px;
+}
+
+#next{
+    right : 10px;
+}
+
+.pager{
+    position: absolute; /*뛰우기*/
+    left: 0; right: 0;bottom: 10px;
+    text-align: center;
+    word-spacing: 10px;
+}
+
+
+.active:hover a{
+    display: block;
+    color: white;
+}

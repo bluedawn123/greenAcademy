@@ -1,0 +1,50 @@
+*{margin: 0; padding: 0;}
+body{font-size: 20px;}
+
+/*header와 메인 첫번째 자식들만 선택 + footer */
+header > *, main > *, footer{
+    padding: 10px;
+    background: #ebebeb;
+}  
+
+body{ width: 960px; margin: 0 auto;}
+.logo{
+    background-color: red;
+}
+
+header > nav{
+    margin-top: 20px;
+    background-color: aqua;
+}
+
+.banner{
+    margin-top: 20px;
+    background-color: bisque;
+}
+
+main{
+    margin-top: 40px;
+}
+main > aside{
+    width: 300px;
+    float: left;
+    background-color: green;
+}
+main .content{
+    width: 620px;
+    float: right;
+    background-color: blueviolet;
+}
+
+aside:after{
+    content: ''; clear: left; display: block;
+}
+section:after{
+    content:''; clear: left; display: block;
+}
+main:after{
+    content: ''; clear: left; display: block;
+}
+footer{
+    margin-top:40px;
+}
