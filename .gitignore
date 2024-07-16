@@ -9,3 +9,5 @@
 *.png
 *.woff2
 *.woff
+*.psd
+*.DS_Store
