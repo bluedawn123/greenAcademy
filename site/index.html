@@ -11,32 +11,33 @@
 
 </head>
 <body>
-    <header>
+    <!-- ???왜 header에 넣음? -->
+    <header class="py-1">
         <div class="container">
             <h1 class="logo"><a href="">Acme</a></h1>
             <nav>
                 <ul>
-                    <li>
+                    <li class="menu-txt">
                         <a href="">HOME</a> / <a href="">about</a>
                     </li>
                     <li>
-                        <a href="" class="btn light-gray-bg"><i class="fa-solid fa-lock"></i> Sign in</a>
+                        <a href="" class="menu-txt light-gray-bg"><i class="fa-solid fa-lock"></i> Sign in</a>
                     </li>
                     <li>
-                        <a href="" class="btn primary-bg">Sign up for free</a>
+                        <a href="" class="menu-txt btn primary-bg">Sign up for free</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="banner">
-        <h2 class="banner-tt">Portfolio Manager</h2>
-        <h3 class="section-tt">It's awesome. And it's FREE!</h3>
-        <a href="" class="btn big primary-bg">Sign up for free</a>
+    <section class="banner pt-3">
+        <h2 class="banner-tt mb-1" >Portfolio Manager</h2>
+        <h3 class="section-tt mb-2">It's awesome. And it's FREE!</h3>
+        <a href="" class="btn big primary-bg mb-2">Sign up for free</a>
         <img src="./images/banner.png" alt="">
     </section>
     <main class="container">
-        <section class="feature">
+        <section class="feature py-3">
             <h2 class="blind">feature</h2>    <!--웹표준검사떄문임. css로 지울것.-->
             <ul>
                 <li>
@@ -57,7 +58,7 @@
             </ul>
         </section>
         <hr>
-        <section class="testimonial">
+        <section class="testimonial py-3">
             <h2 class="blind">testimonial</h2>    <!--웹표준검사떄문임. css로 지울것.-->
             <div class="slidewrapper">
                 <ul class="slidecontainer">
@@ -85,12 +86,12 @@
             </div>
         </section>
     </main>
-    <section class="cta">
+    <section class="cta py-3">
         <h2 class="section-tt">Create your free account.</h2>
         <h2 class="section-desc">No hidden fees, no credit card required.</h2>
         <a href="" class="btn big primary-bg">Sign up for free</a>
     </section>
-    <footer>
+    <footer py-3>
         <p>(c) 2014. All rights reserved.</p>
         <p>Questions? Email at <a href="mailto:office@product.com" class="link" >office@product.com</a></p>
     </footer>
