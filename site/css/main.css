@@ -1,40 +1,38 @@
 @charset "utf-8";
-@import url('normalize.css'); @import url('reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-/* *{
-  box-sizing: border-box;
-} */
-:root{--body: #2c2c2c;--medium-gray: #a8a8a8;--light-gray: #ebebeb;
-  --dark-gray: #6e6e6e;--primary:#9ac75b;--secondary:#55762c;
-  --banner:#2d3e4f;--whtie:#ffffff;--sky-blue:#439ccf;
-  --font-base:16px;--line-base:27px; --container:1270px;
+
+/* 이 페이지는 공통된 사항이 아닌 것들만.. */
+.cf:after{content: ''; display: block; clear: both;}
+.banner .section-tt{
+  color: var(--white);
+}
+.banner img{
+  display: block; margin: 0 auto;
 }
 
-/* layout */
-.container{
-  width: var(--container);
-  margin: 0 auto;
+.feature li{
+  background-color: pink;
+  width: 408px;
+  float: left;
+  margin-right: 24px;
+  text-align: center;
 }
 
-.mb-1{margin-bottom: var(--line-base)}
-.mb-2{margin-bottom: calc( var(--line-base)*2 )}
-.py-3{ /*패딩 위아래 3줄*/
-  padding-top: calc( var(--line-base)*3 );
-  padding-bottom: calc( var(--line-base)*3 );
-}
-.py-1{ 
-  padding-top: calc( var(--line-base) );
-  padding-bottom: calc( var(--line-base) );
+.feature li:last-child{
+  margin-right: 0;
 }
 
-.pt-3{padding-top: calc( var(--line-base)*3 );}
-
-/* typo */
-body{
-  font:var(--font-base)/var(--line-base) "Open Sans", sans-serif;
+.feature li span{
+  display: inline-block;
+  width: 108px; height: 108px;
+  border: 1px solid var(--sky-blue);
+  border-radius: 50%;
+  box-sizing: border-box; /*선 너비까지 포함해서*/
+  line-height: 106px;    /*108-2 해서 안쪽공간이 106px*/
+  font-size: 32px;
+  color: var(--sky-blue);
+  margin-bottom: var(--line-base);
 }
 
-.menu-txt{
-  font-size: 14px; font-weight: 700;
-  text-transform: uppercase;
+.feature li h3{
+  margin-bottom: var(--line-base);
 }
