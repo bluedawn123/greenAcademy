@@ -105,6 +105,7 @@ main ul {
     margin-top: 50px;/* 마진 중첩 때문. */
     border: 1px solid #838383;
 }
+
 main ul:after{  /*위에 그린거 말려오지 않게*/
     content: ''; display: block; clear: both;
 }
@@ -120,13 +121,14 @@ main ul li{
     text-transform: uppercase;
 }
 main ul li a{
-    color:#444;
+    color:blue;
     display: block;/*공간 다 쓰게*/
 }
 
 main ul li:last-child{
     border-right: none; /*두줄방지*/
 }
+
 main ul li a:hover{
     background-color: #e3514e;
     color: white;

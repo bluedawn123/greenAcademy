@@ -37,6 +37,7 @@ h1,h2,h3,h4,h5,h6{
     width: 1px; height: 1px;
     overflow: hidden;
 }
+
 hr{
     width: 400px;
     margin-left: auto; margin-bottom: auto; /*다시 초기화*/
