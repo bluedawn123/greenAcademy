@@ -9,18 +9,15 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/signin.css">
 
 
 </head>
 <body>
-    <!-- 1. cf를 지웠을때 왜 말려옴? float도 없고 아래 영역도 나눠져 있는데.... -->
-    <!-- 2. 옆의 float:none을 하지 말고 그냥 cf를 지우는 건 왜 안됌?-->
-    <!-- 3.  -->
     <header class="py-1">
-      <div class="container cf">
+      <div class="container">
         <h1 class="logo"><a href="index.html">Acme</a></h1> 
+        <!--아직 float살아있어서 css에서 float:none으로 지움. 그래서 없어져서 위에 container에 cf도 쓸 필요가 없어짐. -->
       </div>
     </header>
     <main class="form banner py-3">
