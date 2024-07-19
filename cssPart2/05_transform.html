@@ -19,16 +19,26 @@
         /* .scale:hover img{transform: scaleY(1.5);} */
         .scale{
             perspective: 1000px;
+            /* 기본적으로 가상의 카메라는 가운데를 보고 있다. 이는
+            perspective-origin : 50% 50%;를 의미한다. 
+            */
+            perspective-origin: 0 0;
+
         }
         .scale:hover img{
-            transform: scalez(2) translateZ(100px) ;
+            transform: scalez(5) translateZ(100px) ;  /*!!!!!!!!!!!!!질문. 호버시 다른 곳을 눌렀을때도????*/
         }
 
+
         .rotate img{ 
-            transform : perspective(1000px);}
-        .rotate:hover img{
-            transform: perspective(1000px) rotateY(180deg);
+            transform-origin : 0 50%;
+            transform: perspective(1000px) rotateY(85deg);
         }
+        .rotate:hover img{
+            transform: perspective(1000px) rotateY(0);
+        }
+
+
         .skew:hover img{
             transform: skewY(-45deg);
         }
