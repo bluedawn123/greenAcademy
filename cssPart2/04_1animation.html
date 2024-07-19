@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: green;
+            animation-name : changeColor;
+            animation-duration: 3s; /*진행시간*/
+            animation-delay: 1s;    /*대기타임*/
+            animation-timing-function:ease-in; /*진행과정 어떻게 할것?*/
+            animation-iteration-count: 5;     /*반복횟수*/
+            animation-fill-mode: forwards reverse; /*진행방향에서 멈추기*/
+
+            /* animation:changeColor 1s 1s ease-in 5 forwards; */
+        }
+
+        @keyframes changeColor {
+            0%{background-color: green; margin-left: 0; margin-top: 0;}
+            50%{background-color: yellow; margin-left:100px; margin-top: 0;}
+            50%{background-color: blue; margin-left: 100px; margin-top: 100px;}
+            75%{background-color: pink; margin-left: 0; margin-top: 100px;}
+            100%{background-color: black; margin-left: 0; margin-top: 0px;}
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">box</div>
+    <hr>
+    <!--  
+        아래쪽으로 40px 내려가고 있고, 투명도 0
+        순차적으로(0.1s간격) 위로(원래위치)올라오고 투명도 1
+        조건: hr 움직이면 안된다.
+        애니메이션의 이름 fadeUp, 시간 0.5초
+    -->
+    <header>
+        <h2>Main title</h2>
+        <p>
+            description
+        </p>
+        <a href="">read more</a>
+    </header>
+    <hr>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        header > *{
+            animation-name: fadeUp; animation-duration: 1s;
+            animation-fill-mode: forwards;
+            position: relative;
+            opacity: 0;
+            top:40px;
+        }
+
+        @keyframes fadeUp {
+            0% { opacity: 0; top:40px;}    
+            100% { opacity: 1; top:0;}
+        }
+        header p{
+            animation-delay: 0.4s;
+        }
+        header a{
+            animation-delay: 0.7s;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">box</div>
+    <hr>
+    <!--  
+        아래쪽으로 40px 내려가고 있고, 투명도 0
+        순차적으로(0.1s간격) 위로(원래위치)올라오고 투명도 1
+        조건: hr 움직이면 안된다.
+        애니메이션의 이름 fadeUp, 시간 0.5초 + 전체가 1초에 진행.
+    -->
+    <header>
+        <h2>Main title</h2>
+        <p>
+            description
+        </p>
+        <a href="">read more</a>
+    </header>
+    <hr>
+</body>
+
+</html>

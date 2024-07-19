@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        .box {width: 300px;height: 300px;border: 1px solid;margin: 2rem auto;}
+
+        /* gradient : 종류(linear, radial) (진행방향, 색상 색상의위치, ...  색상 색상의위치) 
+        방향 : to bottom, to top, 45deg 등등
+        */
+
+        /* .linear{
+            background: linear-gradient(to bottom, #2989cc 0%, #fff 50%,
+            #906a00 52%, #d99f00 64%, #fff 100%);
+        } */
+
+        /*.linear{
+            background: linear-gradient(to bottom, #2989cc 0%, #2989cc 20%, #fff 20%, #fff 80%, #2989cc 80%, #2989cc 100%);
+         여기서 중복되는 부분은 생략가눙. 
+        }*/
+
+        /* .linear{
+            background: linear-gradient(#fff 20%,  #2989cc, #fff);
+        } */
+
+        .linear{
+            background: repeating-linear-gradient(#2989cc 50px, #fff 50px, #2989cc 100px);
+        } 
+
+        /* radial 
+        background : radial-gradient(모양 중심점 좌표, 색상 위치, 색상 위치)
+        모양 : circle, ellipse
+        기본값 circle farthest-corner at 50% 가 기본값.
+        */
+        .radial{
+            height: 200px;
+            background : radial-gradient(circle closest-side at 50%,  #000 0%, #fff 100%)
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Gradient</h1>
+    <div class="box linear">linear gradient</div>
+    <div class="box radial">Radial gradient</div>
+</body>
+
+</html>
