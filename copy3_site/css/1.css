@@ -1,0 +1,133 @@
+@charset "utf-8";
+@import url('normalize.css'); @import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* *{
+  box-sizing: border-box;
+} */
+:root{--body: #2c2c2c; --medium-gray:#a8a8a8; --light-gray:#ebebeb;
+  --dark-gray: #6e6e6e;--primary:#9ac75b;--secondary:#55762c;
+  --banner:#2d3e4f;--whtie:#ffffff;--sky-blue:#439ccf;
+  --font-base:16px;--line-base:27px; --container:1270px;
+}
+
+.cf:after{content: ''; display: block; clear: both;}
+/* layout */
+.container{
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.mb-1{margin-bottom: var(--line-base)}
+.mb-2{margin-bottom: calc( var(--line-base)*2 )}
+.py-3{ /*패딩 위아래 3줄*/
+  padding-top: calc( var(--line-base)*3 );
+  padding-bottom: calc( var(--line-base)*3 );
+}
+.py-1{ 
+  padding-top: calc( var(--line-base) );
+  padding-bottom: calc( var(--line-base) );
+}
+
+.pt-3{padding-top: calc( var(--line-base)*3 );}
+hr{  /*hr같은 경우 디자인은 없애도 다시 만든다.*/
+  border: none; 
+  border-top: 1px solid var(--light-gray);
+}
+
+.blind{
+    position: absolute;
+    clip:reac(0,0,0,0);
+    clip-path: inset(0 0 100% 100%);
+    width: 1px; height: 1px;
+    overflow: hidden;
+}
+/* typo */
+body{
+  font:var(--font-base)/var(--line-base) "Open Sans", sans-serif;
+}
+
+.menu-txt{
+  font-size: 14px; font-weight: 700;
+  text-transform: uppercase;
+}
+
+.banner-tt{
+  font-size: calc( var(--line-base) * 2);
+  line-height: calc( var(--line-base) * 2);
+  letter-spacing: calc( var(--line-base)*2*0.02);
+  text-transform: uppercase;
+  color: var(--banner);
+  text-align: center;
+}
+
+.section-tt{
+  font-weight: 300;
+  font-size: var(--line-base);
+  line-height: calc(var(--line-base)* 1.18 );
+}
+
+.sub-tt{
+  font-size: calc(var(--line-base)*0.88);
+
+}
+
+.section-desc{
+  font-size: calc(var(--line-base)*0.66);
+  line-height: var(--line-base);
+  color: var(--medium-gray);
+}
+
+.link{
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* colors */
+.light-gray-bg{background: var(--light-gray);}
+.primary-bg{background: var(--primary);}
+
+/* link and buttons */
+.btn {
+  padding: 0 20px;
+  line-height: 39px;
+  border-radius: 4px;
+  display: inline-block; /*a요소이기 때문에 넓이높이x 여기서 패딩으로 잡음*/
+  color: var(--dark-gray);
+}
+
+.btn.big{ /*큰버튼자기자신.*/
+  padding: 0 30px;
+  line-height: calc(var(--line-base)*2);
+}
+
+.btn.primary-bg{
+  color: var(--secondary);
+}
+
+/* header */
+header .logo{float: left;}
+
+.logo a{
+    width: 161px; height: 54px;
+    background: url(../images/logo.png) no-repeat;
+    text-indent: -9999em;
+    display: block;
+}
+
+header .nav{
+    float: right;
+    padding-top: 7.5px;
+}
+
+.nav-menu ul li{
+    float: left;
+    margin: 10px;
+}
+
+header nav li:first-child{
+    margin-right: 50px;
+}
+
+header nav li:last-child{
+    margin-right: 0;
+}

@@ -1,0 +1,228 @@
+@charset "utf-8";
+@import url(normalize.css);
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+  --body:#2C2C2C;
+  --medium-gray:#A8A8A8;
+  --light-gray:#EBEBEB;
+  --dark-gray:#6E6E6E;
+  --primary:#9AC75B;
+  --secondary:#55762C;
+  --banner:#2D3E4F;
+  --white:#FFFFFF;
+  --sky-blue:#439CCF;
+  --banner-txt : #3a99db;
+  --font-base:16px;
+  --line-base:27px;
+  --container:1272px;
+}
+
+/* layout */
+.container{
+  max-width: var(--container); width: 80%;
+  margin:0 auto;
+}
+.mb-1{
+  margin-bottom:var(--line-base);
+}
+.mb-2{
+  margin-bottom:calc(var(--line-base) * 2);
+}
+.mb-3{
+  margin-bottom:calc(var(--line-base) * 3);
+}
+
+
+.py-1{
+  padding-top: var(--line-base);
+  padding-bottom: var(--line-base);
+}
+.py-3{
+  padding-top: calc(var(--line-base) * 3);
+  padding-bottom: calc(var(--line-base) * 3);
+}
+.pt-3{
+  padding-top: calc(var(--line-base) * 3);
+}
+/*hr같은 경우 디자인은 없애도 다시 만든다.*/
+hr{
+  border:none;
+  border-top:1px solid var(--light-gray);
+}
+.cf:after{
+  content:'';
+  display: block;
+  clear:both;
+}
+
+.blind{position: absolute;clip:reac(0,0,0,0);
+  clip-path: inset(0 0 100% 100%);width: 1px; height: 1px;overflow: hidden;
+}
+
+/* typography */
+body{
+  font:var(--font-base)/var(--line-base) "Open Sans", sans-serif;
+}
+.menu-txt {
+  font-size:14px;
+  font-weight:700;
+  text-transform:uppercase;
+}
+.banner-tt {
+  font-size:calc(var(--line-base) * 2);
+  line-height:calc(var(--line-base) * 2);
+  letter-spacing: calc(var(--line-base) * 2 * 0.02 );  
+  text-transform:uppercase;
+  color:var(--banner-txt);
+  text-align:center;
+}
+.section-tt {
+  font-weight: 300;
+  font-size:var(--line-base);
+  line-height: calc(var(--line-base) * 1.18);
+  text-align: center;
+}
+.sub-tt{
+  font-size:calc(var(--line-base) * 0.88);
+}
+.section-desc{
+  font-size:calc(var(--line-base) * 0.66);
+  line-height: var(--line-base);
+  color:var(--medium-gray);
+  text-align: center;
+}
+.link{
+  color:var(--primary);
+  text-decoration:underline;
+}
+/* colors */
+.light-gray-bg {
+  background: var(--light-gray);
+}
+.primary-bg {
+  background: var(--primary);
+}
+/* link & buttons */
+.btn {
+  padding: 0 20px;
+  line-height: 39px;
+  border-radius: 4px;
+  display: inline-block; /*a요소이기 때문에 넓이높이x 여기서 패딩으로 잡음*/
+  color:var(--dark-gray);
+}
+.btn.big{ /*큰버튼자기자신.*/
+  padding: 0 30px;
+  line-height: calc(var(--line-base) * 2);
+}
+.btn.primary-bg{
+  color:var(--secondary);
+}
+
+/* header */
+header .logo{
+  float:left;
+}
+nav{
+  float:right;
+  padding-top: 7.5px; /*line-height때문에 높이 자동조절*/
+}
+nav li{
+  float:left;
+  margin-right: 10px;
+}
+nav li:first-child{
+  margin-right: 50px;
+  line-height:39px;    
+}
+nav li:first-child span{
+  margin:0 10px;
+  color:var(--medium-gray);
+}
+nav li:last-child{
+  margin-right: 0;
+}
+
+.logo a{
+  display: block;
+  width: 161px;
+  height: 54px;
+  background:url(../images/logo.png) no-repeat;
+  text-indent:-9999em;
+}
+
+/* banner */
+.banner{
+  background: var(--banner);
+  text-align: center;
+}
+
+/* slideshow */
+
+.slidewrapper{  /*버튼의 포지션 기준점*/
+  overflow: hidden;
+  position: relative;
+}
+
+.slidecontainer{
+  width: calc( var(--container) * 3);
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+}
+
+.slidecontainer li {
+  width: var(--container);
+  float: left;
+  text-align: center;
+}
+
+.slidecontainer li blockquote{
+  width: 828px;
+  margin: 0 auto;
+  background-color: #2C2C2C;
+  font-size: calc(var(--line-base)*0.88);
+  line-height: calc(var(--line-base)*1.33);
+  color: var(--sky-blue);
+  font-style: italic;
+  font-weight: 300px;
+  margin-bottom: var(--line-base);
+}
+
+.slidecontainer li small{
+  font-weight: 300; color: var(--sky-blue);
+  text-transform: uppercase;
+  background-color: red;
+}
+
+.slidewrapper button{
+  position: absolute;
+  background: none; padding: 0;
+  font-size: 45px; line-height: 46px;
+  border: none;
+  color: var(--dark-gray);
+  top : calc( 50% - 23px); cursor: pointer;
+}
+
+.prev{left: 0;}
+.next{right: 0;}
+
+.cta{
+  background: #292c2e;
+  text-align: center;
+}
+.cta h2{
+  color: var(--white); 
+  margin-bottom: var(--line-base);
+}
+.cta p{
+  margin-bottom: calc( (var(--line-base) * 2) );
+}
+footer{
+  text-align: center;
+}
+
+footer p:first-child{
+  margin-bottom: var(--line-base);
+}
