@@ -29,7 +29,7 @@ header{
 }
 
 /* 블러랑 투명도 걸기 -> 사진에 걸지말고 after를 사용해서 걸어보자! */
-header:after{  /*빈 공간 만들고 전체를 커버해서 0.5만큼만 거둡게 하기*/
+header::after{  /*빈 공간 만들고 전체를 커버해서 0.5만큼만 거둡게 하기*/
     content: ''; position: absolute; 
     left: 0; right: 0; bottom: 0; top:0;
     background: rgba(0, 0, 0, 0.5);
