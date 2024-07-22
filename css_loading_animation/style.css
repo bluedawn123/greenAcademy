@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Palanquin', sans-serif;
+  line-height: 1.618em;
+  background: #3498db;
+  color: #fff;
+}
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 5rem auto;
+  text-align: center;
+}
+h1.loading {
+  font-size: 3em;
+  font-weight: 400;
+}
+
+h1 span{
+  opacity: 0;
+}
+
+.dot_one{
+  animation-name: dot_one;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  /* animation:dot_one 2s infinite linear; */
+}
+
+@keyframes dot_one{
+  0%{opacity: 0;}
+  15%{opacity: 0 ;}
+  25%{opacity: 1;}
+  100%{opacity: 1}
+}
+
+.dot_two{
+  animation: dot_two 2s infinite linear;
+}
+@keyframes dot_two{
+  0%{opacity: 0;}
+  40%{opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity: 1}
+}
+
+.dot_three{animation: dot_three 2s infinite linear;}
+@keyframes dot_three{
+  0%{opacity: 0;}
+  65%{opacity: 0;}
+  75%{opacity: 1;}
+  100%{opacity: 1}
+}
+
+
+.bouncing_ball{
+  width: 4rem; height: 12rem;
+  margin: 0 auto;
+  position: relative;
+}
+.ball{
+  width: 4rem; height: 4rem;
+  background : #fff;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  animation: bounce 1s infinite linear;
+}
+
+@keyframes bounce{
+  0%{top : 0; animation-timing-function: ease-in;}
+  34%{transform:scale(1, 1);}
+  35%{top : 8rem; animation-timing-function: ease-out;
+    transform:scale(1.2, 0.9);
+  }
+  45%{
+    transform:scale(1, 1);
+  }
+  100%{top : 0}
+}
+
+.spinner{
+  width: 6rem; height: 6rem;
+  position: relative;
+  border: 1px solid #fff;
+  margin: 2rem auto;
+}
+
+.spinner div[class^="curve"]{
+  /* border: 1px solid #fff; */
+  position: absolute;
+  transform: rotate(-45deg);
+  animation: spin 4s infinite;
+}
+@keyframes spin {
+  0%{transform: rotate(-45deg); opacity: 1;}
+  25%{opacity: 0.5;}
+  50%{transform: rotate(-765deg); opacity: 1;}
+  75%{opacity: 0.5;}
+  100%{transform: rotate(-45deg); opacity: 1;} 
+}
+
+
+.curve_top_left{
+  width: 3rem; height: 3rem;
+  top:0; left:0;
+  border-top: 0.5rem solid #fff;
+  border-left: 0.5rem solid #fff;
+  border-top-left-radius: 100% ;
+  transform-origin: 100% 100%;
+}
+
+.curve_bottom_right{
+  width: 3rem; height: 3rem;
+  bottom: 0; right: 0;
+  border-bottom: 0.5rem solid #fff;
+  border-right: 0.5rem solid #fff;
+  border-bottom-right-radius: 100%;
+  transform-origin: 0 0;
+}
+
+.curve_top_right{
+  width: 2rem; height: 2rem;
+  left: 50%; bottom: 50%;
+  border-top: 0.5rem solid #fff;
+  border-right: 0.5rem solid #fff;
+  border-top-right-radius: 100%;
+  transform-origin: 0 100%;
+
+}
+
+.curve_bottom_left{
+  width: 2rem; height: 2rem;
+  top: 50%; right: 50%;
+  border-bottom: 0.5rem solid #fff;
+  border-left: 0.5rem solid #fff;
+  border-bottom-left-radius: 100%;
+  transform-origin: 100% 0;
+}
+
+.center_circle{
+  width: 1.5rem; height: 1.5rem;
+  background: #fff; border-radius: 50%;
+  position: absolute;
+  left : 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%{opacity: 1;}
+  50%{opacity: 0.5;}
+  100%{opacity: 1;} 
+}
