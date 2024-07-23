@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans";
+  background: #ecf0f1;
+}
+.wrapper {
+  max-width: 60rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+.gradientbg::before,
+.gradientbg::after {
+  content: " ";
+  display: table;
+}
+.gradientbg::after {
+  clear: both;
+}
+.gradientbg .sidebar {
+  width: 20%;
+  padding: 1.618rem;
+  color: #fff;
+}
+.gradientbg main {
+  width: 60%;
+  padding: 1.618rem;
+  float: left;
+  margin-left: 20%;
+  background: #fff;
+}
+.gradientbg .left {
+  float: left;
+  margin-left: -80%;
+  background: #3498db;
+}
+.gradientbg .right {
+  float: right;
+  background: #34495e;
+}
+
+.gradientbg{
+  background: linear-gradient(to right,  #3498db 20%, #fff 20%, #fff 80%, #34495e 80%);
+}
+
+.flexbg{
+  display: flex;
+}
+
+
+.flexbg main{width: 60%;background: #fff;padding: 20px;}
+.flexbg .sidebar{width: 20%;padding: 20px;}
+.flexbg .left{background: #3498db;order: -1;}
+.flexbg .right{background : #34495e;}
+
+
+
+/* width가 768이하 인 경우 */
+@media screen and (max-width:768px){
+  .gradientbg main{
+    width: 100%;
+    margin-left: 0;
+  }
+  .gradientbg .left{
+    margin-left: 0;
+  }
+  .gradientbg .sidebar{
+    width: 50%;
+  }
+  .gradientbg{
+    background: linear-gradient(to right,  #3498db 50%,  #34495e 50%);
+  }
+
+
+  .flexbg{flex-wrap: wrap;}
+  .flexbg main {width: 100%;order: -1;}
+  .flexbg .sidebar{width: 50%;}
+  .flexbg .left{order: 0;}
+
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+  .gradientbg .sidebar {
+      width: 100%;
+  }
+  .gradientbg main, .gradientbg .sidebar{float: none;} /*그닥안중요하나보기꺼려서none처리*/
+
+  .flexbg .sidebar{
+    width: 100%;
+  }
+
+}
