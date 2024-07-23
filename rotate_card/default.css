@@ -8,9 +8,32 @@ body {
   height: 150px;
   width: 150px;
   margin:100px;
+  perspective: 100px; /*입체적 움직임을위한 가상의카메라*/
+ 
 }
 .card {
   height: 100%;
   width: 100%;  
   position: absolute;
+  transition: 1s;
+}
+.card-container:hover .card{  /*움직일 대상의 부모에게 HOVER을 해야한다. ★★★*/
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;  /*부모가 돌때 자식도 같이 도는 것 유지*/
+}
+
+.side{
+  position: absolute;
+  left: 0; top: 0; bottom: 0; right: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  backface-visibility: hidden;  /*뒷면 안보이게!*/
+}
+
+.back{
+  background: #eaeaed;
+  color: #0087cc;
+  text-align: center;
+  line-height: 150px;
+  transform: rotateY(180deg);
 }
