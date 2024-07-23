@@ -1,0 +1,16 @@
+body {
+  font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+  margin: 12px 0;
+}
+.card-container {
+  position:relative;
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+  margin:100px;
+}
+.card {
+  height: 100%;
+  width: 100%;  
+  position: absolute;
+}

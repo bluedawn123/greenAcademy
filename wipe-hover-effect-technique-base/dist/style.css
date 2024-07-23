@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu li {
+  margin-top: 25px;
+}
+
+.menu a { 
+  display: inline-block;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 1.4;
+  color: red;  /*원래는 silver이나 잘 보려고 red로 변경함*/
+  position: relative;
+}
+
+.menu a::before{
+  content: attr(data-link);
+  position: absolute;
+  color: #3498db;
+  left : 0; right: 100%; top: 0; bottom: 0;
+  white-space: nowrap; 
+  /*공간이 좁으면 글자가 바닥으로 떨어지는 습성
+  기본은 white-space : wrap*/
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menu li:first-child a:hover:before{
+  right: 0;
+}
+
+
+
+
+
+.menu li[data-animation="to-left"] a{
+  color: #3498db;
+}
+.menu li[data-animation="to-left"] a:before{
+  color: silver;
+  left: 0; right: 0; top: 0; bottom: 0;
+}
+.menu li[data-animation="to-left"] a:hover:before{
+  color: #3498db;
+  left: 0; right: 100%; top: 0; bottom: 0;
+}
+
+
+
+.menu li[data-animation="to-bottom"] a:before{
+  color: #3498db;
+  left: 0; right: 0; top: 0; bottom: 100%;
+}
+.menu li[data-animation="to-bottom"] a:hover:before{
+ bottom: 0;
+}
+
+
+
+.menu li[data-animation="to-top"] a{
+  color: #3498db;
+}
+.menu li[data-animation="to-top"] a:before{
+  color: silver;
+  left: 0; right: 0; top: 0; bottom: 0;
+}
+.menu li[data-animation="to-top"] a:hover:before{
+  color: #3498db;
+  left: 0; right: 0; top: 0; bottom: 100%;
+}
+
