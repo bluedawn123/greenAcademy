@@ -19,15 +19,40 @@
     </script>
     <h3>문자열 더하기</h3>
     <script>
+        let s1 = 'js';
+        let s2 = ' basic';
+        let s3 = s1 + s2;
+
+        document.write(s3);
 
     </script>
-    <h3>증감 연산자</h3>
-    <script>
+    <h3>증감 연산자. 전치, 후치. 실행된 시점이 중요</h3>
+    <h5>i++  후치. 실행후 증가</h5>
+    <h5>++i  전치. 바로 증가</h5>
 
+    <script>
+        let i = 1;
+        document.write(i++ + '<br>' ) ; //1
+        document.write(i + '<br>')      //2
+        document.write(++i)             //3
     </script>
     <h3>복합대입연산자</h3>
+    <pre>
+        +=, -=, *=, /=, %= 등등
+    </pre>
     <script>
+        let x = 1;
+        x += 1;       //x = x + 1;
 
+    </script>
+    <h3>주의</h3>
+    <script>
+        console.log('문자'+20+30) //문자2030으로 출력. 문자20 이 문자로 취급되기 때문.
+        console.log('10'+20)  //1020
+        console.log('10'-20)  //-10
+        console.log('10'*20)  //200
+        console.log('10'/20)  //0.5
+        console.log('문자'/'문자')  //NaN => not a number
     </script>
 
 

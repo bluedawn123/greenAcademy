@@ -10,6 +10,31 @@
 <body>
     <h1>Object</h1>
     <script>
+        let s1 = {};
+        s1.korea = 100;
+        s1.eng = 90;
+
+        console.log(s1) //s1이 오브젝트 형태로 들어있다. 
+        console.log(s1.korea) //100;
+
+        let s2 = {
+            korea : 90,
+            english : 95,
+            math : 90,
+
+            total : function (){
+                return s2.math+s2.english+s2.korea
+            },
+
+            evr : function() {  
+                return this.total() / 3
+            }
+
+        };
+        console.log(s2.math) //30
+        console.log( s2.total() )  //275
+        console.log( s2.evr() )
+
 
     </script>
 </body>
