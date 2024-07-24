@@ -9,7 +9,17 @@
 
 <body>
     <h1>Array</h1>
+    <pre>
+
+    </pre>
+    
     <script>
+        let wl = [];
+        wl[0] ='html'; wl[1] = 'css'; wl[2]='javascript';
+
+        console.log(wl);
+
+
 
     </script>
     <hr>
@@ -22,50 +32,114 @@
     </script>
     <h2>length</h2>
     <script>
-
+        console.log(wl.length); //3
     </script>
-    <h2>join</h2>
+    <h2>join : 배열의 값을 묶어서 하나의 문자열로 반환하는 내장함수. ,가 기본값</h2>
     <script>
+        let wljoin = wl.join()
+        console.log(wljoin)          //html,css,javascript 
+        console.log(typeof(wl))      //object  ????
+        console.log(typeof(wljoin))  //string
+        console.log(wl.join() )      //html,css,javascript
 
     </script>
     <h2>reverse</h2>
+    <pre>
+        이건 원본을 훼손한다. 주의
+    </pre>
     <script>
-
+        console.log(wl.reverse() )  //(3) ['javascript', 'css', 'html']
     </script>
     <h2>sort</h2>
+    <pre>
+        여러 차순으로 정렬한다. 원본 훼손
+    </pre>
     <script>
+        let fruits = ['apple', 'orange', 'banana'];
+        fruits.sort();
+        console.log(fruits);  //(3) ['apple', 'banana', 'orange']
+
+        let nums = [0, 50, 20, 40, 8, 4] 
+        nums.sort();
+        console.log(nums) //6) [0, 20, 4, 40, 50, 8]
+ 
+        //////오름차순으로 출력해보자
+        let nums2 = [0, 50, 20, 40, 11, 24, 9, 1, 4] 
+        nums2.sort(function(a, b){
+            return a - b
+        })
+        console.log(nums2); // (9) [0, 1, 4, 9, 11, 20, 24, 40, 50]
+
+        ///////내림차순으로 출력해보자
+        let nums3 = [0, 50, 11, 24, 9, 1, 4] 
+        nums3.sort(function(a, b){
+            return b - a
+        })
+        console.log(nums3); //(7) [50, 24, 11, 9, 4, 1, 0]
 
     </script>
-    <h2>push</h2>
+    <h2>push : 배열의 끝에 새로운 값 추가. 크기(length)는 자동증가</h2>
     <script>
 
     </script>
     <h2>pop</h2>
+    <pre>마지막만 터트림</pre>
     <script>
+        fruits.pop();
+        console.log(fruits);  //['apple', 'banana']
 
     </script>
     <h2>unshift</h2>
+    <pre>맨 앞에만 추가</pre>
     <script>
-
+        fruits.unshift('ddalki');
+        console.log(fruits);  //['ddalki', 'apple', 'banana']
     </script>
+
     <h2>shift</h2>
+    <pre>첫값 제거</pre>
     <script>
+        fruits.shift();
+        console.log(fruits) //['apple', 'banana']
 
     </script>
     <h2>slice</h2>
     <script>
+        let numTest = [2,4,6,8,10];
+        let numslice = numTest.slice(2,4)
+        console.log(numslice); //[6, 8]
 
     </script>
     <h2>splice</h2>
     <script>
+        let spliceNum = [0,1,2,3,4,5]
+        let splicedNum = spliceNum.splice(0, 3);
+        console.log(splicedNum);   //[0, 1, 2]
+        console.log(spliceNum)     //[3, 4, 5]
 
     </script>
     <h2>concat</h2>
+    <pre>배열 합치기</pre>
     <script>
+
+
+        let fl = ['react', 'nextjs', 'vuejs']
+        let feDev = wl.concat(fl);
+        console.log(feDev) //['javascript', 'css', 'html', 'react', 'nextjs', 'vuejs']
 
     </script>
     <h2>filter</h2>
-    <script>
+    <script>    
+        let numsss = [10, 7, 25, 22, 30];
+        let filteredNums = numsss.filter( function(item, index, all){
+            //console.log(item);  배열객체들을 하나하나씩 찍어줌. 10 7 25 22 30
+            //console.log(index);  0,1,2,3,4
+            //console.log(all);  (5) [10, 7, 25, 22, 30]이거 5번 반복;
+
+            return item % 2 == 0;
+
+        })
+        console.log(filteredNums) //[10, 22, 30]  짝수, 혹은 2의 배수.
 
     </script>
 </body>
