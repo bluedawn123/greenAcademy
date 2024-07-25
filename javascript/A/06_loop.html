@@ -14,27 +14,117 @@
     </script>
     <hr>
     <h2>for 반복문</h2>
+    <pre>
+        for( 초기값; 조건; 증감){
+            작업
+        }
+
+    </pre>
     <script>
+        // for (var i=0; i<=10; i=i+2 ){
+        //     document.write(i)
+        // }
+    </script>
+    <hr>
+    <script>
+        // for (var i=0; i<=10; i++ ){
+        //     document.write(i)
+        // }
+        // for (let i = 10; i >= 1; i--){
+        //     document.write(i)
+        // }
+
+        for(let i = 1; i <=8  ; i++){
+            // document.write('2 x ' + i + '=' + i*2 + '<br>');
+            document.write(`2 x ${i} = ${i*2}` + '<hr>');
+        }
 
     </script>
     <h2>while 반복문</h2>
+    <pre>
+        초기값;
+        while(조건){
+            반복할일;
+            증감;
+        }
+    </pre>
     <script>
+        // let a = 0;
+        // while(a <= 8){
+        //     a*2;
+        //     a = a+2
+        //     console.log(a)
+        // }
 
     </script>
     <h2>do while 반복문</h2>
+    <pre>
+        초기값;
+        do{
+            반복할일;
+            증감;
+        }while(조건);
+    </pre>
     <script>
+        //y = 0;
+        let y = 0;
+        do{
+            y*2;
+            y = y+2
+            console.log(y)
+        }while(y <= 8)
 
     </script>
-    <h2>forEach 반복문</h2>
+    <h2>forEach 반복문 => 반드시 배열대상</h2>
+    <pre>
+        대상.forEach( function(각원소, 인덱스, 전체요소){
+            
+        })
+    </pre>
     <script>
+        let arr = ['가', '나', '다', '라', '마']
+        arr.forEach( (item, index, all)=> {
+            console.log(item + ' 는 배열 ' + all + ' 중 ' + index + '번째 값입니다.')
+        })
+
+        const numbers = [10, 20, 30, 40, 50];
+        numbers.forEach((item, index, all) => {
+        console.log(`Index: ${index} and Value : ${item} `) //Index: 0 and Value : 10 
+    });
+
+
 
     </script>
-    <h2>for in 반복문</h2>
+    <h2>for in 반복문 => 객체 대상으로 키 값 뽑아낼때 유용(property in object)</h2>
+    <pre>
+        for (let property in object){
+            할일. 
+            console.log(property, object[property])
+        }
+    </pre>
+    <script>
+        let st1 = {
+            kor:80, eng:70, math:100  
+        }
+
+        for (let p in st1){
+            console.log(p +' 점수 '+ st1[p])          //kor 80, eng 70, math 100
+        }
+    </script>
+
+    <h2>for of 반복문 => foreach와 몹시 유사하고 역시 배열 대상이다. </h2>
     <script>
 
-    </script>
-    <h2>for of 반복문</h2>
-    <script>
+        const array1 = ['a', 'b', 'c'];
+        for (const element of array1) {
+            console.log(element);  //a, b, c
+        }
+
+
+        let arr3 = ['가', '나', '다', '라', '마']
+        for (let item of arr3){
+            console.log(item + '입니다.<br>');  //가, 나, 다, 라, 마
+        }
 
     </script>
 
