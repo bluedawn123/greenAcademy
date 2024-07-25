@@ -10,6 +10,16 @@
 <body>
     <h1>조건문</h1>
     <script>
+        let a = 10; let b = 20; let q = true;
+        if(a > b){
+            console.log('a가 b보다 크다.');
+        }
+        if( q ){
+            console.log('참..');
+        }else{
+            console.log('거짓');
+        }
+
 
     </script>
     <hr>
@@ -19,31 +29,99 @@
     <hr>
     <h2>비교연산자 != </h2>
     <script>
-
+        let c = 1; let d = 4;
+        if(c > d){
+            console.log('c는 d보다 크다.');
+        }
+        else if( c!=d ){
+            console.log('둘다 다르다.');
+        }
+        else{
+            console.log('c가 d보다 크다.');
+        }
     </script>
     <hr>
     <h2>타입 비교</h2>
     <script>
+        let x = 10; let y = '10'; let z = null; let s = undefined;
+        
+        console.log(typeof(x))
+        console.log(typeof(y))
+        
+        
+        if( x === y){
+            document.write('두 값은 같다.')
+        }else{
+            document.write('같지 않다.')
+        }
+
+        if( z == s){
+            document.write('두 값은 같다.')
+        }else{
+            document.write('같지 않다.')
+        }
 
     </script>
     <hr>
     <h2>중첩 조건문</h2>
+    <pre>중괄호를 유의하자.</pre>
     <script>
+        if(a != b){
+            if( a > b){
+                console.log('a > b')
+            }else{
+                console.log('a<b');
+            }
+        }else{
+            console.log('둘이 같다.')
+        }
+
 
     </script>
     <h2>조건문의 축약</h2>
     <script>
-
-
+        a > b ? console.log('a>b이다. 축약') : console.log(' a < b이다. 축약');
     </script>
 
     <h2>논리연산자</h2>
     <script>
+        let aa = 10; let bb = 20; let cc = 30;
+
+        if(aa<bb && bb<cc){
+            document.write('참');
+        }
 
     </script>
 
     <h2>switch</h2>
+    <pre>
+        switch(조건){
+            case 값1:
+                할일
+                break;
+            case 값2:
+                할일
+                break;
+            default:
+                할일
+                break;
+        }
+    </pre>
     <script>
+        let number =prompt('숫자를 입력하라');
+        console.log(number)
+
+        switch(number % 2){
+            case 0 :
+                alert('짝수입니다.');
+                break;
+            case 1 :
+                alert('홀수입니다.');
+                break;
+            default :
+                alert('숫자가 아닙니다. 숫자를 쓰시오');
+                break;
+        }
 
     </script>
 </body>
