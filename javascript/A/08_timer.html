@@ -10,13 +10,33 @@
 <body>
     <h1>Timer</h1>
     <h2>setTimeout</h2>
+    <pre>
+        타이머를 설정하고 시간이 되면(timeout)코드를 실행
+        setTimeout(할일, 시간);  할일응 보통 함수로, 시간은 ms기준. 3초는 3000임
+        setTimeout( 함수, 3000);
+
+        타이머 종료.
+        clearTimeOut(mytimer)
+    </pre>
+
+    <script>
+        let mytimr = setTimeout( function (){
+            alert('안녕하세요!')
+        }, 3000)
+
+        clearTimeout(mytimr);
 
     </script>
 
     <h2>setInterval</h2>
+    <pre>
+        시간을 정해 원하는 걸 반복한다
+    </pre>
     <script>
-
-
+        let myInterval = setInterval( function (){
+            alert('안녕하세요!')
+        }, 3000)
+        clearTimeout(myInterval);
     </script>
 </body>
 

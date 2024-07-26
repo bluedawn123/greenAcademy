@@ -10,36 +10,86 @@
 <body>
     <h1>String</h1>
     <h2>chartAt</h2>
+    <pre>
+        charAt() 함수는 문자열에서 특정 인덱스에 위치하는 유니코드 단일문자를 반환.
+    </pre>
     <script>
-
+        let str1 = 'hello World';
+        const sentence = 'The quick brown fox jumps over the lazy dog.';
+        const index = 4;
+        console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+        // Expected output: "The character at index 4 is q"
     </script>
+
 
     <h2>IndexOf, Search</h2>
+    <pre>
+        대상.search('찾을문자');
+        대상.indexOf('찾을문자');
+    </pre>
     <script>
+        // console.log(str.indexOf(llos));
+        // console.log(str.search('llos'));
 
     </script>
+    <ul>
+        <li><a href="menu1.html">menu1</a></li>
+        <li><a href="menu2.html">menu2</a></li>
+        <li><a href="menu3.html">menu3</a></li>
+    </ul>
+
 
     <h2>concat</h2>
+    <pre>
+        문자, 배열을 합치는 함수
+    </pre>
     <script>
-
+        let str2 = 'javascript'; let str3 = 'basic';
+        let newStr = str2.concat(str3);
+        console.log(newStr)
     </script>
+
 
     <h2>replace</h2>
+    <pre>
+        a.replace('b', 'c') //원본수정!! 새로운 문자열 생성
+        a에서 b를 c로 변경
+    </pre>
     <script>
-
+        let newstr2 = str1.replace('World', 'Universe');
+        console.log(newstr2)
     </script>
+
 
     <h2>slice</h2>
+    <pre>
+        지정한 구간의 값을 복사. 
+        대상.slice(시작, 끝)
+        hello world 에서 world라는 부분 복사를 새 배열 slideStr에 할당하고 console 출력
+    </pre>
     <script>
-
+        //st1 = 'hello World';
+        let slicedStr = str1.slice(6, 11)
+        console.log(slicedStr)
     </script>
+
 
     <h2>split</h2>
-    <script>
+    <pre>
+        펼치다. join의 반대. join ? 배열을 합쳐서 하나의 문장으로 만드는 것. 
+        그렇다면 splie은 이와 반대로 하나의 문장을 배열로 만드는 것ㅣ
 
+        단 split( ) 안의 것이 기준이 된다. 
+        
+    </pre>
+    <script>
+        let langs = 'a/b/c';
+        let langArr = langs.split('/') //  /기준
+        console.log(langArr) //Array(3). 배열 형식으로 나온다!
     </script>
 
-    <h2>length</h2>
+
+    <h2>length : 글자수 확인</h2>
     <script>
 
     </script>
