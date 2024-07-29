@@ -23,7 +23,19 @@ html, body {
 }
 
 .panel-body {
-  padding: 15px;
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.active .panel-body{
+  max-height: 300px;
+
+} 
+
+.active .panel-heading{
+  background: #3498db;;
 }
 
 #btn-collapse {
