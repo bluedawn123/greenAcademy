@@ -6,16 +6,14 @@
 
 .tab-menu li a.active{
 	color: #fff;
+	background: #000;
 }
-.nav {
-	position: relative;
+
+#tab-content div{
+	display: none;
 }
-.highlight{
-	position: absolute;
-	width: 98px;
-	top:0;
-	left:0;
-	bottom:0;
-	background:#000;
-	transition:0.4s cubic-bezier(0.65, 0, 0.35, 1);
+
+#tab-content div.active{
+	display: block;
 }
+
