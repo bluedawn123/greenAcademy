@@ -24,6 +24,12 @@ article{
 	text-align:center; 	
 	background-color:#444;
 	color:#fff;
-
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.4s;
 }
 
+#go-top.active{
+	opacity: 1;
+	pointer-events: auto;
+}
