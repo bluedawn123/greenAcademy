@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체2</title>
+    <script>
+        window.onload = function(){
+            const btn1 = document.getElementById('btn1')
+            btn1.addEventListener('click',clickBtn)
+            const btn2 = document.getElementById('btn2')
+            btn2.addEventListener('click',clickBtn)
+            const btn3 = document.getElementById('btn3')
+            btn3.addEventListener('click',(e) => {
+                console.log(`e.target.id: ${e.target.id}`) //e.target.id: btn3
+                console.log(`e.target.type: ${e.target.type}`) //e.target.type: button 
+
+                console.log('버튼3이 눌렸어요!😝')
+            })
+        }
+        function clickBtn(e){
+            switch(e.target.id){ //btn1, btn2가 들어가겠지?
+                case 'btn1':console.log('버튼1이 눌렸어요!😝')
+                break
+                case 'btn2':console.log('버튼2가 눌렸어요!😝')
+                break
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <h2>이벤트 객체2</h2>
+    <button type="button" id="btn1" >버튼1</button>
+    <button type="button" id="btn2" >버튼2</button>
+    <button type="button" id="btn3" >버튼3</button>
+</body>
+</html>
+출처: https://coding-yesung.tistory.com/137 [예코공:티스토리]
