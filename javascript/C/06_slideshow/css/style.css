@@ -23,8 +23,8 @@ body {
     height:100%;
     margin:0;
     padding: 0;
-    /* transition: left .3s ease-in;
-    left: 0; */
+    left: 0;
+    transition: left 0.4s;
 }
 
 .slide-container>li {
@@ -37,37 +37,36 @@ body {
     background-position: center center;
     background-size: cover;
     list-style: none;
-    opacity: 0;
-    transition: opacity 0.5 ease-in-out; /*???*/
-    visibility: hidden;
-}
 
-.slide-container>li.active{
-    opacity: 1;
-    visibility: visible;
 }
 
 .slide1 {
+
     background-image: url(../images/slide_01.jpg)
 }
 
 .slide2 {
+
     background-image: url(../images/slide_02.jpg)
 }
 
 .slide3 {
+
     background-image: url(../images/slide_03.jpg)
 }
 
 .slide4 {
+
     background-image: url(../images/slide_04.jpg)
 }
 
 .slide5 {
+
     background-image: url(../images/slide_05.jpg)
 }
 
 .slide6 {
+
     background-image: url(../images/slide_06.jpg)
 }
 
