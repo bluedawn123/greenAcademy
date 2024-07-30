@@ -6,6 +6,19 @@ let slideCount = slides.length  //5
 let currentIdx = 0;
 let nextBtn = document.querySelector('#next');
 let prevBtn = document.querySelector('#prev');
+let pager = document.querySelector('.pager');
+
+/*
+태그 생성하기
+대상.innerHTML = 값    => 태그로 넣기
+대상.innerText = 값    => 쌩글씨넣기
+
+*/
+
+
+
+
+
 
 //처음실행
 goToslide(0)
@@ -16,6 +29,7 @@ goToslide(0)
 // }
 slides.forEach( (item, index, all)=>{
     item.style.left = `${index * 100}%`;
+    pager.innerHTML = '<a href="">0</a>'
 })
 
 /*슬라이드 이동함수
@@ -51,3 +65,26 @@ nextBtn.addEventListener('click', ()=>{
 prevBtn.addEventListener('click', ()=>{
     goToslide(currentIdx - 1);  //역시 -100 -200 -300... 
 });
+
+//자동 넘어가는 함수
+function auto(){
+    setInterval( () => {
+        goToslide(currentIdx + 1);
+
+        if(currentIdx === slides.length){
+            goToslide(currentIdx === 0);
+        }
+    }, 12000);
+}
+auto();
+
+
+//페이저 생성
+
+
+
+
+
+
+
+
