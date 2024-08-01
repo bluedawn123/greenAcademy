@@ -16,10 +16,6 @@ let pager = document.querySelector('.pager');
 */
 
 
-
-
-
-
 //처음실행
 goToslide(0)
 
