@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyMap</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+  </head>
+  <body>
+    <h1>Daum Map</h1>
+    <h2>basic map</h2>
+
+    <!-- 지도를 표시할 div 입니다 -->
+    <div id="map" class="map"></div>
+
+    <h2>advanced map</h2>
+
+    <div class="tab-wrapper">
+        <div class="nav">
+          <ul class="tab-menu">
+            <li><a href="#tabs-1" class="active" data-lat="37.51726165396372" data-lng="127.04736152776583">강남구청</a></li> 
+            <li><a href="#tabs-2" data-lat="37.51726165396372" data-lng="127.04736152776583">종로구청</a></li>  
+            <li><a href="#tabs-3" data-lat="37.56649724330134" data-lng="126.9021245551607">마포구청</a></li>  
+          </ul>
+          <span class="highlight"></span>
+        </div>
+        <div id="tab-content">
+          <div id="tabs-1" class="active map">
+            
+          </div>
+          <div id="tabs-2" class="map">
+            
+          </div>
+          <div id="tabs-3" class="map">
+           
+          </div>
+        </div>
+      </div>
+
+
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=629c42edabc946071406828ef48ac13a"
+    ></script>
+
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
+
+<!-- https://www.google.com/maps/place/%EA%B7%B8%EB%A6%B0%EC%BB%B4%ED%93%A8%ED%84%B0%EC%95%84%ED%8A%B8%ED%95%99%EC%9B%90+%EC%A2%85%EB%A1%9C%EC%BA%A0%ED%8D%BC%EC%8A%A4/data=!4m10!1m2!2m1!1z6re466aw7Lu07ZOo7YSw7JWE7Yq4IOyiheuhnA!3m6!1s0x357ca2e7f16f756d:0x414573df934d0e95!8m2!3d37.5697291!4d126.9897183!15sChzqt7jrprDsu7Ttk6jthLDslYTtirgg7KKF66GcIgOIAQGSARhjb21wdXRlcl90cmFpbmluZ19zY2hvb2zgAQA!16s%2Fg%2F1tlc5_wk?entry=ttu -->
