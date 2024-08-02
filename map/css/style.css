@@ -9,7 +9,7 @@
 	background: #000;
 }
 
-#tab-content div{
+#tab-content > div{
 	display: none;
 }
 
@@ -19,5 +19,4 @@
 
 .map{
     height: 350px;
-
 }

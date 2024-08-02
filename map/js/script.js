@@ -33,16 +33,17 @@ function makeMap(target, lat, lng, title) {
   infowindow.open(map, marker);
 }
 
-/*
-대상.getAttribute('속성명') => 속성명의 값을 변환
-let a = test.getAttribute('c') => test요소의 c속성값을 a에 할당
-let target = a.getAttribute('c')
- */
 let tabMenu = document.querySelectorAll(".tab-menu a");
 let tabContent = document.querySelectorAll("#tab-content > div");
 
+//가상의 클릭이벤트를 만들고 1번탭을 눌렀을떄와 똑같은 효과를 줌. 시작때 활성화 시키려고
+let clickEvent = new Event('click');
+
+
 for (let tm of tabMenu) {
   console.log(tm); //tabmenu의 a링크 3개가 들어있다.
+
+  tabMenu[0].dispatchEvent(clickEvent); //클릭이벤트 강제추가. 열자마자 강남구청 클릭한 것처럼.
 
   tm.addEventListener("click", function (e) {
     e.preventDefault();
