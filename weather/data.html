@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>초단기 실황조회.</title>
+  </head>
+  <body>
+    <h1>초단기</h1>
+    <h2>발표일자 : <span id="date"></span></h2>
+    <h2>발표시각 : <span id="time"></span></h2>
+    <h2>온도 : <span id="temp"></span></h2>
+    <h2>습도 : <span id="humidity"></span></h2>
+
+    <script>
+        const queryDate = new Date(); //fri aug 02 2024 12:50:00 이런식.. 
+        let year = queryDate.getFullYear(); let month = String(queryDate.getMonth()+1).padStart(2, '0'); 
+        let day = String(queryDate.getDate()).padStart(2, '0'); 
+        console.log(year, month, day) //2024 '08' '02'
+
+        //2024 '08' '02'에서 ''들을 제거해서 일렬로 변경해야 한다.
+        let resultDate = `${year}${month}${day}`  //20240802   왜???????
+
+      fetch(
+        `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=7JXANjG3Lq8X0%2BF7t75doxQX9BJdfg1WAqi6IXoX4c%2BX7x0B56NXKfWpfwAB3kN13QCLnA18Tk7itJrkv8fn%2Bg%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${resultDate}&base_time=0600&nx=60&ny=127`
+      )
+        .then((response) => {
+          return response.json(); //객체로 변환
+        })
+        .then((data) => {
+          // 조회된결과(파라미터.여기선 data)확인.즉, data로할일;
+          //console.log(data.response.body.items.item);  (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+          result = data.response.body.items.item;
+          console.log(result);
+
+          let today = document.querySelector("#date");
+          let time = document.querySelector("#time");
+          let temp = document.querySelector("#temp");
+          let humidity = document.querySelector("#humidity");
+
+          today.innerText = result[0].baseDate;
+          time.innerHTML = result[0].baseTime;
+          temp.innerHTML = result.find( item => item.category === 'T1H').obsrValue;
+          humidity.innerHTML = result.find( item => item.category === 'REH').obsrValue;
+
+        });
+
+    </script>
+  </body>
+</html>
