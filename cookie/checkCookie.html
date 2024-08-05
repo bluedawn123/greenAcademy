@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*쿠키확인 방법
+        document.cookie
+        
+        */
+      console.log(document.cookie); //CookieName=ABC; ABC재방문
+      console.log(document.cookie.indexOf("ABC=재방문")); //16 => 16번째 있다는 의미. 없으면 -1이 나온다.
+      //즉 -1보다 크다면 전에 왔다는 걸 의미한다.
+
+      console.log(document.cookie.search("ABC=재방문")); //16 =>
+
+      //쿠기의 공백제거
+      let cookie = document.cookie.replace(" ", "");
+      let cookies = cookie.split(";"); //;가 있으면 문자열을 배열로 변환.
+
+      console.log(cookies); //(2) ['CookieName=ABC', ' ABC=재방문']  이제 공백을 제거해야한다.
+
+      //방식2
+      let result = cookies.find(item => item === 'ABC=재방문'); //result값이 있으면 재방문.
+      console.log(result);
+
+    </script>
+  </head>
+  <body></body>
+</html>

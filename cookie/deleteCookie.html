@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠키 삭제</title>
+    <script>
+        let date = new Date();
+        date.setDate(date.getDate() -1);
+
+        /*쿠기 제거 => 만기일을 과거로 돌리면 된다.
+        */
+        let myCookie = 'ABC=재방문;path=about;expires='+date.toUTCString();
+        document.cookie = myCookie;
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
