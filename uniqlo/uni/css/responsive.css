@@ -1,0 +1,18 @@
+@media screen and (max-width:1272px){
+  :root{--container:100%;}
+  .container{padding: 0 16px; box-sizing: border-box;}
+  .banner img{width: 95%;}
+  .slidecontainer li blockquote{ width: 65%; }
+}
+@media screen and (max-width:768px){
+  .slidecontainer li blockquote{ width: 90%; }
+  .feature ul{flex-direction: column; gap:27px;}
+}
+@media screen and (max-width:645px){
+  header .container{flex-direction: column; gap:27px; }
+  nav li:first-child{margin-right: 0;}
+}
+@media screen and (max-width:480px){
+  nav li:first-child { width: 100%;text-align: center;}
+  nav ul {flex-wrap:wrap; justify-content: center; align-items: center; gap: 10px;}
+}
