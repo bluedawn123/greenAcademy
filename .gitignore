@@ -1,12 +1,10 @@
-*.jpg
+
 *.gif
-*.svg
 *.ttf
 *.txt
 *.zip
 *.mp3
 *.mp4
-*.png
 *.woff2
 *.woff
 *.psd
