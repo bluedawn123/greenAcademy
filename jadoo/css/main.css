@@ -39,6 +39,7 @@ body{
   font-family: "Poppins", sans-serif;
   */
   font:var(--fz)/var(--lh) "Poppins", sans-serif;
+  color: var(--txt-color);
 }
 
 /* 링크 버튼 */
@@ -68,6 +69,7 @@ header{
 }
 .top_nav nav{
   display: flex;
+  align-items: center;
 }
 .top_nav ul {
   display: flex;
@@ -103,4 +105,66 @@ header{
 }
 .login_links a:hover{
   border-color:#212832;
+}
+.top_nav .dropdown{
+    position: relative;
+}
+.top_nav .dropdown ul{
+    position: absolute;
+    right: 0;
+    top: 100%;  
+    padding: 5px;
+    border: 1px solid #212832;
+    flex-direction: column;
+    border-radius: 5px;
+    background: var(--white);
+    display: none;
+}
+
+.top_nav .dropdown ul li{
+    line-height: 30px;
+    padding: 0 15px;
+}
+
+.top_nav .dropdown ul li:hover {
+    cursor: pointer;
+    color: #212832;
+}
+
+header .content{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .content .desc{
+    width: 545px;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+header .content .desc h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: #DF6951;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+header .content .desc h2{
+    font-family: "Volkhov", serif;
+    font-size: 84px;
+    font-weight: 700;
+    color: #181E4B;
+    line-height: 89px;
+    letter-spacing: -3.36px;
+    margin-bottom: 30px;
+}
+
+header .content .desc p{
+    font-size: 16px;
+    width: 477px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 34px;
 }
