@@ -1,7 +1,7 @@
 const rowsPerPage = 10;  //한페이지에 tr을 몇개 보여줄까
 const rows = document.querySelectorAll('#my-table tbody tr'); 
 const rowsCount = rows.length;
-const pageCount = Math.ceil(rowsCount / rowsPerPage);   //페이지의 갯수. (100/9 11.1 => 12개 생성.. )
+const pageCount = Math.ceil(rowsCount / rowsPerPage);   //tr의갯수/한페이지의 tr갯수 => 페이지의 갯수. (100/9 11.1 => 12개 생성.. )
 const numbers = document.querySelector('#numbers'); 
 const maxPageNum = 3;     //한 페이지의 최대페이지 수
 
@@ -27,10 +27,11 @@ for(let i = 1; i<=pageCount; i++){
 numbers.innerHTML = numberHTML;
 
 const numberBtn = numbers.querySelectorAll('a');
-const pageGroupCount = Math.ceil(pageCount / maxPageNum);
+const pageGroupCount = Math.ceil(pageCount / maxPageNum);  // 올림(페이지의 총 갯수 / 최대페이지 수) 올림(10/3)=> 4....
 
 console.log(numberBtn)
 
+//전체 tr에 대해서 안보이게 하고 보이게설정한tr들을 보이게 만든다. displayRow(0)이면 1~9번만 보이도록..
 function displayRow(num){
     // 모든 tr을 보이지 않게 한다.
     rows.forEach( (item, idx, all) => {
@@ -51,8 +52,6 @@ function displayRow(num){
     for(let item of newRows){
         item.style.display = '';  //displayRow(숫자); 숫자에 들어간 건 보이게!
     }
-    
-
 }
 displayRow(0);
 
@@ -71,8 +70,9 @@ numberBtn.forEach( (item, idx, all) => {
     })
 })
 
+//
 function displayPagination(num){
-    //모든 pager안보이게
+    //모든 숫자버튼안보이게
     numberBtn.forEach( (item, idx, all) =>{
         item.style.display = 'none';
     })
@@ -100,6 +100,7 @@ function displayPagination(num){
     //???
     displayRow(start);
 
+    //pageAcitveIdx는 현재 보고 있는 페이지 이므로, 
     pageActiveIdx = num;
     console.log(pageActiveIdx)
 
@@ -120,7 +121,7 @@ function displayPagination(num){
 
 }
 
-displayPagination(0);
+displayPagination(1);
 
 
 
