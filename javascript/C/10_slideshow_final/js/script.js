@@ -131,7 +131,7 @@ function AutoSlide(){
   }, 4000);
 }
 
-//AutoSlide();
+// AutoSlide();
 
 // slideWrapper.addEventListener('mouseenter',()=>{
 //   clearInterval(timer);
