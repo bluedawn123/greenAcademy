@@ -5,16 +5,16 @@
 	.st0{
 		fill:none;stroke:#FFFFFF;stroke-width:12;stroke-miterlimit:10;
 		stroke-dasharray:800;
-		stroke-dashoffset:800;
-		animation: dash 2s linear forwards;
+		stroke-dashoffset:800;		
+		animation:dash 2s linear forwards;
+		}
 
-	}
+		@keyframes dash{
+			0% {stroke-dashoffset:800;}
+			100% {stroke-dashoffset:0;}
+		}
 
-	@keyframes dash{
-		from { stroke-dashoffset:800;}
-		to { stroke-dashoffset:0;}
-	}
-
+	
 </style>
 <g id="Pencil">
 	<polygon id="PencilShape" class="st0" points="30.829,270 101.735,270 225.82,145.914 243.547,145.914 243.547,128.188 
