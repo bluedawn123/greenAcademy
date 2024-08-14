@@ -1,0 +1,60 @@
+:root{
+  --white:#fff;
+  --main:#eaedf0;
+  --accent:#0041ff;
+}
+body{
+  background: var(--main);
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+}
+.calendar{
+  width: 408px;
+  padding: 1em;
+  background: var(--white);
+  border-radius:30px;  
+}
+.calendar header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calendar header span{
+  font-size: 2em;
+  cursor: pointer;
+}
+.header-display{
+  font-size: 1.2em;
+  color: var(--accent);
+}
+.week{
+  display: flex;  
+  gap:10px;
+  text-align: center;
+  padding: 20px 0;
+}
+.week div{
+  width: 3em;
+}
+.days{
+  display: flex;
+  flex-wrap:wrap;
+  gap: 10px;
+}
+.days div{
+  width: 3em;
+  height: 3em;
+  border-radius:50%;
+  background: #ebebeb;
+}
+.selected {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.2em;
+  color: var(--accent);
+  display: none;
+}
