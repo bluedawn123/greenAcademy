@@ -49,7 +49,15 @@ body{
   width: 3em;
   height: 3em;
   border-radius:50%;
-  background: #ebebeb;
+  text-align: center;
+  line-height: 3em;
+}
+.days div.current{
+  background: var(--accent);
+  color: var(--white);
+}
+.days div:hover{
+  background: var(--main);
 }
 .selected {
   text-align: center;
