@@ -6,14 +6,17 @@
   width: 1000px;
   margin:3em auto;
   background: #ccc;
-  height: 400px;
   position: relative;
   overflow:hidden;
+  height: 400px;
+
 }
 .slidecontainer{
   position: relative;
   display: flex;
   left:0;
+  height: 400px;
+
   /* 이거의 넓이에 따라 옆으로 퍼지는데 이건 slides갯수에 따라 달라지므로 js에서 해결
   즉, 여기서 넓이를 잡는게 아니다. */
 }
