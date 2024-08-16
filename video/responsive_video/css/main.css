@@ -46,36 +46,48 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-.body,html{
+body, html{
 	height: 100%;
 }
-
 .container{
-	width: 100%;
-	height: 100%;
+	width: 70%;
+	margin: 2rem auto;
 }
-
 .container video{
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit:cover;
 }
 
 .fixed_height {
 	height: 500px;
 }
 
-.pic{
+.pic {
 	height: 500px;
 }
-
 .pic img{
 	width: 100%;
 	height: 100%;
+	object-fit:cover;
 }
 
-
+.fixed_height iframe{
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+}
+.fluid div{
+	position: relative;
+	padding-top:56.25%;
+}
+.fluid iframe{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
 
 
 
