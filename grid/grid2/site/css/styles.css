@@ -1,0 +1,49 @@
+body, html { margin: 0; }
+
+body {
+	background-color: #333;
+	color: #79776a;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+}
+
+p { line-height: 1.4em; }
+
+h1,h2,h3 {
+	font-family: 'Libre Baskerville', serif;
+}
+
+h2 {
+	font-size: 26px;
+	margin-top: 4px;
+}
+
+button {
+	border: 1px solid #999;
+	border-radius: 4px;
+	background-color: transparent;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 6px 14px;
+	color: #79776a;
+	margin-top: 10px;
+}
+
+.container {
+	background-color: #fff;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.section1,.section2,.section3,.section4 { display: grid; }
+
+/* 포토샵을 통한 너비 확인
+42px 59px 66px 30px 53px 750px
+43px 50px 55px auto auto
+*/
+/* SECTION 1 */
+
+.section1{
+	grid-template-columns: 42fr 59fr 66fr 30fr 53fr 750fr;
+	grid-template-rows: 43px 50px 55px auto auto;
+}
