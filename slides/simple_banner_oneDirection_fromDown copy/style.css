@@ -4,8 +4,6 @@
 }
 .slidewrapper{
   width: 100%;
-  /* margin:3em auto; */
-  background: #ccc;
   position: relative;
   overflow:hidden;
   height: 100vh;
@@ -13,6 +11,7 @@
 }
 .slidecontainer{
   position: relative;
+  width: 100%;
   display: flex;
   left:0;
   height: 100vh;
@@ -54,3 +53,28 @@
 .pager a.active {
   background: #000;
 }
+
+
+
+
+
+
+
+
+
+
+.slidecontainer li {
+  position: absolute;
+  left: 0;top: 0; height: 100%; width: 100%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  list-style: none;
+}
+
+#slide1 {background-image: url(./images/slide_bg1.jpg)}
+#slide2 {background-image: url(./images/slide_bg2.jpg)}
+#slide3 {background-image: url(./images/slide_bg3.jpg)}
+#slide4 {background-image: url(./images/slide_bg4.jpg)}
+

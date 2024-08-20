@@ -52,3 +52,6 @@ button{
     border: none;
 }
 
+div{
+	box-sizing: border-box;
+}
