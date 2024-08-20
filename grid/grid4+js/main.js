@@ -57,7 +57,7 @@ for(let btn of btns){
 //구별이 안되므로 빈배열로 만들고 거기에 숫자 추가.
 const captionArr = []; 
 let counter = 0; //숫자를 지정해주기 위해서.
-let prices = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 1100, 12300]
+
 
 for(let caption of captions){
     captionArr.push({
@@ -68,7 +68,7 @@ for(let caption of captions){
     )
 }
 
-
+console.log(imageListItem);
 
 
 
