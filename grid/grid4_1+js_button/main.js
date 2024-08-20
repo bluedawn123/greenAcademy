@@ -106,19 +106,15 @@ for (let btn of btns) {
 
 const captionArr = [];  //새배열생성
 const captions = imageList.querySelectorAll('figcaption p:first-child') //각 개체의 제목들
-const images = imageList.querySelectorAll('figure img')
-const makers =  imageList.querySelectorAll('figcaption p:nth-child(2) a');
 const prices = imageList.querySelectorAll('figcaption p:nth-child(3)') //각 개체의 제목들
 let counter = 0; // 숫자를 지정해주기 위해서.
 
 //빈 배열에 id, text, price을 밀어넣음.
 for (let i = 0; i < captions.length; i++) {
     captionArr.push({
-        url : images[i].getAttribute('src'),
-        maker : makers[i].textContent, 
-        id: counter++,                               // 고유 ID를 부여합니다.
-        text: captions[i].textContent,               // 텍스트를 추가합니다.
-        price: Number(prices[i].textContent)         // 가격을 추가합니다.
+        id: counter++,                    // 고유 ID를 부여합니다.
+        text: captions[i].textContent,    // 텍스트를 추가합니다.
+        price: Number(prices[i].textContent)               // 가격을 추가합니다.
     });
 }
 
@@ -157,29 +153,13 @@ priceSelector.addEventListener("change", (e) => {
         })
 
         //내림차순을 만들어준다.
-        const newCaptionArr1 = [...captionArr];
-        newCaptionArr1.sort((a, b) => {
+        const newCaptionArr = [...captionArr];
+        newCaptionArr.sort((a, b) => {
             return a.price - b.price;
         });
 
-        console.log(newCaptionArr1) //price 기준 low -> high로 새로운 배열이 모두 나온다.
-
-        let lowtoHighPriceHtml = '';
-
-        newCaptionArr1.forEach(item => {
-            lowtoHighPriceHtml += 
-        `<li>
-            <figure>
-              <img src="${item.url}" alt="">
-              <figcaption>
-                <p>${item.title}</p>
-                <p>Photo by <a href="https://unsplash.com/@${item.maker}" target="_blank">${item.maker}</a></p>
-                <p>${item.price}</p>
-              </figcaption>
-            </figure>
-          </li>`
-        })
-        imageList.innerHTML = lowtoHighPriceHtml
+        console.log(newCaptionArr) //price 기준 low -> high로 새로운 배열이 모두 나온다.
+        
 
 
 
@@ -191,30 +171,12 @@ priceSelector.addEventListener("change", (e) => {
         })
 
         //내림차순을 만들어준다.
-        const newCaptionArr2 = [...captionArr];
-        newCaptionArr2.sort((a, b) => {
+        const newCaptionArr = [...captionArr];
+        newCaptionArr.sort((a, b) => {
             return b.price - a.price;
         });
 
-        //console.log(newCaptionArr2) price 기준 high -> low 로 새로운 배열이 모두 나온다.
-        
-        let HighToLowPrice = '';
-
-        newCaptionArr2.forEach(item => {
-            HighToLowPrice += 
-        `<li>
-            <figure>
-              <img src="${item.url}" alt="">
-              <figcaption>
-                <p>${item.title}</p>
-                <p>Photo by <a href="https://unsplash.com/@${item.maker}" target="_blank">${item.maker}</a></p>
-                <p>${item.price}</p>
-              </figcaption>
-            </figure>
-          </li>`
-        })
-        imageList.innerHTML = HighToLowPrice
-
+        console.log(newCaptionArr) //price 기준 high -> low 로 새로운 배열이 모두 나온다.
 
     } else {
         imageListItem.forEach( item => {

@@ -55,14 +55,13 @@ body {
 }
 
 .container {
-  max-width: 1030px;
+  max-width: 95%;
   margin: 0 auto;
 }
 
 .d-none {
   display: none;
 }
-
 
 /* TOOLBAR
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -120,12 +119,19 @@ figcaption{
   align-items: flex-start;
   justify-content: center;  
   flex-direction: column;
+
 }
 figcaption p:first-child{
   font-weight: bold;
   text-transform: uppercase;
-}
 
+}
+figcaption p:nth-child(2){
+  font-weight: normal;
+  font-size: 15px;
+  text-transform: uppercase;
+
+}
 
 
 /* MQ
