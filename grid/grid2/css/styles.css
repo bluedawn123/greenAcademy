@@ -1,0 +1,244 @@
+body, html { margin: 0; }
+
+body {
+	background-color: #333;
+	color: #79776a;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+}
+
+p { line-height: 1.4em; }
+
+h1,h2,h3 {
+	font-family: 'Libre Baskerville', serif;
+}
+
+h2 {
+	font-size: 26px;
+	margin-top: 4px;
+}
+
+button {
+	border: 1px solid #999;
+	border-radius: 4px;
+	background-color: transparent;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 6px 14px;
+	color: #79776a;
+	margin-top: 10px;
+}
+
+.container {
+	background-color: #fff;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.section1,.section2,.section3,.section4 { display: grid; }
+
+/* SECTION 1 */
+.section1 {
+	display: grid;
+	grid-template-columns: 40fr 130fr 40fr 50fr 750fr;
+	grid-template-rows: 45px auto 55px auto auto;
+}
+.section1-bg {
+	grid-column: 1 / span 5;
+	grid-row: 1 / span 5;
+}
+.main-logo {
+	grid-column: 2 / span 2;
+	grid-row: 2 / span 1;
+}
+.section1-2018 {
+	grid-column: 3 / span 2;
+	grid-row: 4 / span 1;
+}
+
+/* SECTION 2 */
+.section2 {
+	display: grid;
+	grid-template-columns: 4fr 3fr 30fr 9fr 9fr 4fr 9fr 7fr 25fr;
+	grid-template-rows: 90px 30px 38px 20px 136px 281px auto;
+	margin-top: -314px;
+}
+
+.section2-skier {
+	grid-column: 8 / span 2;
+	grid-row: 6 / span 2;
+	width: 100%;
+}
+
+.fall-lookbook {
+	grid-column: 2 / span 1;
+	grid-row: 1 / span 3;
+}
+
+.section2-bg {
+	grid-column: 1 / span 8;
+	grid-row: 2 / span 5;
+}
+
+.section2-title {
+	grid-column: 4 / span 2;
+	grid-row: 3 / span 1;
+}
+
+.section2-play {
+	grid-column: 6 / span 1;
+	grid-row: 3 / span 1;
+}
+
+.section2-text {
+	grid-column: 5 / span 3;
+	grid-row: 5 / span 2;
+}
+
+
+/* SECTION 3 */
+.section3 {
+	display: grid;
+	grid-template-columns: 17fr 7fr 1fr 13fr 1fr 12fr 17fr 5fr 28fr;
+	grid-template-rows: 190px 62px 97px 60px 164px 76px auto;
+	margin-top: -170px;
+}.section3-bg {
+	grid-column: 1 / span 9;
+	grid-row: 4 / span 5;
+}
+.browse-collection {
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 1;
+}
+.men-women {
+	grid-column: 3 / span 2;
+	grid-row: 2 / span 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 10px;
+}
+.men-women a {
+	font-family: 'Libre Baskerville', serif;
+	color: #79776a;
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.product-arrows {
+	grid-column: 5 / span 1;
+	grid-row: 4 / span 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.product-arrows img {
+	margin-bottom: 10px;
+}
+.product-thumbs {
+	grid-column: 6 / span 1;
+	grid-row: 4 / span 2;
+}
+.product-img {
+	grid-column: 7 / span 1;
+	grid-row: 1 / span 3;
+}
+.product-title {
+	grid-column: 7 / span 2;
+	grid-row: 4 / span 1;
+}
+.product-description {
+	grid-column: 7 / span 2;
+	grid-row: 5 / span 2;
+	padding-top: 10px;
+}
+
+
+.thumb1, .thumb2, .thumb3 { display: block; margin: 4px auto; }
+
+.thumb1 { height: 100px; }
+.thumb2 { height: 50px; opacity: .6; }
+.thumb3 { height: 30px; opacity: .3; }
+.jacket-large-square {
+	grid-column: 2 / span 2;
+	grid-row: 6 / span 1;
+}
+.jacket-large {
+	grid-column: 1 / span 3;
+	grid-row: 5 / span 3;
+}
+
+.section4 {
+	display: grid;
+	grid-template-columns: 7fr 1fr 13fr 8fr 5fr 17fr 1fr 2fr 9fr 21fr 6fr 11fr;
+	grid-template-rows: 108px 35px 95px 47px 123px 29px 49px 40px 10px 197px 314px 10px 41px 317px 941px;
+	background: url('../images/section05.jpg') bottom center no-repeat;
+	margin-top: -143px;
+}
+.small-logo {
+	grid-column: 3 / span 2;
+	grid-row: 3 / span 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ice-img {
+	grid-column: 3 / span 2;
+	grid-row: 6 / span 3;
+	width: 100%;
+	height: 100%;
+}
+
+.ice-img-orange {
+	grid-column: 2 / span 1;
+	grid-row: 9 / span 1;
+}
+
+.skier-img {
+	grid-column: 5 / span 4;
+	grid-row: 2 / span 5;
+	width: 100%;
+	height: 100%;
+}
+
+.buffalo-img {
+	grid-column: 9 / span 3;
+	grid-row: 1 / span 3;
+	width: 100%;
+	height: 100%;
+}
+
+.sustainable { grid-column: 6 / span 1; grid-row: 8 / span 3;}
+
+.close-to-nature { grid-column: 10 / span 1; grid-row: 5 / span 3; }
+
+.jackson-hole { grid-column: 3 / span 1; grid-row: 11 / span 1; display: flex; align-items: center; justify-content: center;}
+
+.section4-tree { grid-column: 4 / span 3; grid-row: 11 / span 1; width: 100%; height: 100%;}
+
+.section4-tree-orange { grid-column: 7 / span 1; grid-row: 12 / span 1;}
+
+.timeless { grid-column: 6 / span 3; grid-row: 14 / span 1; }
+
+.horn { grid-column: 10 / span 1; grid-row: 10 / span 5; }
+
+@media all and (max-width: 1020px) {
+	.section1-bg, .section2-skier { display: none; }
+	
+	.fall-lookbook {
+		grid-column: 2 / span 1;
+		grid-row: 3 / span 3;
+	}
+	
+	.section2-bg {
+		grid-column: 1 / span 9;
+		width: 100%;
+	}
+	
+	.section2-title { grid-column: 5 / span 3; }
+	.section2-play { grid-column: 8 / span 1; }
+	.section2-text { grid-column: 6 / span 4; }
+}
+

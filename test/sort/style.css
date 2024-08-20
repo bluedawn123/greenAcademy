@@ -1,0 +1,44 @@
+.shop {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.shop button {
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    background-color: lightyellow;
+    cursor: pointer;
+}
+
+
+.shop___card__container {
+    display: flex;
+}
+
+.shop__card {
+    background-color: beige;
+    padding: 30px;
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 1px 1px 4px 1px rgb(194, 194, 159);
+    text-align: left;
+
+}
+
+.shop__card img {
+    width: 300px;
+    height: 300px;
+}
+
+.shop__card .order {
+    border: none;
+    background-color: lightcoral;
+    padding: 5px;
+    cursor: pointer;
+}
