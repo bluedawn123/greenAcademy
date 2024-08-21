@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업 예시</title>
+</head>
+<body>
+
+    <div id="popup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: lightgrey; padding: 20px; border: 2px solid black;">
+        <p>해당 사이트는 개인 포트폴리오용 사이트입니다.</p>
+        <p>하루 동안 이 창이 다시 뜨지 않습니다.</p>
+        <button onclick="closePopup()">닫기</button>
+    </div>
+
+    <script>
+        // 쿠키 설정 함수
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // 쿠키 가져오기 함수
+        function getCookie(name) {
+            const cname = name + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const cookieArr = decodedCookie.split(';');
+            for (let i = 0; i < cookieArr.length; i++) {
+                let c = cookieArr[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(cname) === 0) {
+                    return c.substring(cname.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        // 팝업을 닫고 쿠키 설정
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            setCookie("popupShown", "true", 1);  // 1일 동안 쿠키 저장
+        }
+
+        // 페이지 로드 시 쿠키 확인 후 팝업 표시 여부 결정
+        window.onload = function() {
+            const popupShown = getCookie("popupShown");
+            if (popupShown !== "true") {
+                document.getElementById("popup").style.display = "block";
+            }
+        };
+    </script>
+
+</body>
+</html>

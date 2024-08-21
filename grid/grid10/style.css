@@ -1,0 +1,220 @@
+/* RESET RULES
+listView와 gridView라는 클래스를 만들고
+클래스를 붙뗐 할때마다 변하게 만든다. 
+
+검색로직
+검색키워드 입력시 
+
+
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --black: #1a1a1a;
+  --white: #fff;
+  --gray: #ccc;
+  --darkgreen: #18846C;
+  --lightbrown: antiquewhite;
+  --darkblack: rgba(0,0,0,0.8);
+  --minRangeValue: 280px;  /*<- 자바스크립트로 변경가능하게 만들어줌*/
+}
+
+* {
+  margin: 0;
+  padding: 0;  
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  margin: 50px 0;
+  color: var(--black);
+  font: 1rem/1.3 sans-serif;
+}
+
+.gallery {
+  padding: 0 2rem;
+}
+
+.tab-container {
+  max-width: 95%;
+  margin: 0 auto;
+  /* position: relative; */
+}
+
+.d-none {
+  display: none;
+}
+
+/* TOOLBAR
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.toolbar{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.view-options{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.view-options button{
+  border: 3px solid transparent;
+  padding: 2px;
+}
+.active button{
+  border-color: var(--darkgreen);
+}
+
+
+/* IMAGE LIST
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* GRID VIEW
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*1. 280px로 줄어들면 1fr으로 줄여라. */
+.grid-view{
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--minRangeValue), 1fr));
+}
+
+/* LIST VIEW
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* list-view 가 있을떄 그 안의 figure에  */
+.list-view{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+.list-view figure{
+  display: flex;
+}
+.list-view figure img{
+  width: 200px;
+}
+figcaption{
+  background: var(--lightbrown);
+  padding: 20px;
+  flex:1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;  
+  flex-direction: column;
+
+}
+figcaption p:first-child{
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+figcaption p:nth-child(2){
+  font-weight: normal;
+  font-size: 15px;
+  text-transform: uppercase;
+
+}
+
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+#price__selector{
+  /* position: absolute; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tab-text span{
+  display: inline-block;
+  margin-top: 5px;
+}
+
+
+.tab-text{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: var(--small-fontsize);
+  bottom: -40px;
+  font-weight: bold;
+  color: var(--drak-grey);
+  white-space: pre-line;
+}
+
+.tab-menu {
+  padding-left: 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-menu li a {
+  color: #999;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 27px;
+  text-decoration: none;
+  padding: 0 10px;
+  display: block;
+}
+
+.tab-menu li a.tab-active {
+  color: #fff;
+  background: #000;
+}
+
+#tab-content div {
+  display: none;
+}
+
+#tab-content div.tab-active {
+  display: block;
+}
+
+

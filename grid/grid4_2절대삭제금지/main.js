@@ -138,6 +138,8 @@ searchInput.addEventListener('change', (e) => {
         item.classList.add('d-none')
     })
 
+    console.log(imageListItem)
+
     let filteredArr = captionArr.filter(caption => caption.text.includes(keywords));
     console.log(filteredArr); // [{…}, {…}, {…}] 이런식으로..그리고 안에는 id, text, price가 들어있다. 
     //{id: 0, text: 'green leafed trees', price: 19000}

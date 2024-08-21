@@ -123,13 +123,13 @@ pagerBtn.forEach((pager,idx)=>{
   });
 })
 
-function AutoSlide(){
-  timer = setInterval(()=>{
-    let nextIdx = (currentIdx + 1)%slideCount;
+// function AutoSlide(){
+//   timer = setInterval(()=>{
+//     let nextIdx = (currentIdx + 1)%slideCount;
 
-    goToslide(nextIdx);
-  }, 4000);
-}
+//     goToslide(nextIdx);
+//   }, 4000);
+// }
 
 // AutoSlide();
 
