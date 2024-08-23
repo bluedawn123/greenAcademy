@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anim</title>
+    <style>
+        .box{
+            width: 200px; height: 200px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>애니메이트</h1>
+    <pre>
+        대상.animate( { 속성:값, 속성:값, ... }, 시간, 속도);
+    </pre>
+    <div class="box">
+        box
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js" ></script>
+
+    <script>
+        $('h1').stop().animate( {fontSize : '3em'}, 2000, 'linear', function(){
+            $('h1').stop().animate( {fontSize : '1em'});
+        });
+        console.log('hi')
+
+        $('.box').mouseover(function( ) {
+            $(this).stop().animate( {backgroundColor:'$00f'});
+        }).mouseleave( function() {
+            $(this).stop().animate( {backgroundColor : '#ccc'})
+        });
+
+    </script>
+</body>
+</html>
