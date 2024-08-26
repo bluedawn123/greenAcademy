@@ -23,13 +23,13 @@ carImage.addEventListener('mousedown', function(e){
         sum = save + dragged;
 
         if( dragged >= 0){
-            sum = sum % 25;
+            sum = sum % 49;
         }else{
             if(sum < 0){
-                sum += 26;
+                sum += 50;
             }
         }
-        changeSrc = clickedSrc.replace(/Taycan_[0-9]+/, "Taycan_" + sum);
+        changeSrc = clickedSrc.replace(/k[0-9]+/, "k" + sum);
         carImage.src = changeSrc;
         wrapper.style.cursor = "grabbing";
     }

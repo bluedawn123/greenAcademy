@@ -1,12 +1,17 @@
-h1{
+h1 {
     text-align: center;
     color: blue;
 }
 
-#wrapper{
-    text-align: center;
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면 중앙 배치를 위해 전체 높이 */
+    margin: 0 auto;
 }
 
-#carImage{
-    width: 80%;
+#carImage {
+    width: 100%;
+   /* max-width: 1200px; /* 이미지를 너무 크게 보이지 않게 제한 */
 }
