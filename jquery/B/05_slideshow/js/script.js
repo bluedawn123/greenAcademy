@@ -57,7 +57,7 @@ pagerBtn.click(function(e){
 })
 
 function showSlide(num){  
-  num = (num + slideCount) % slideCount;
+  num = (num + slideCount) % slideCount; //0,1,2,3,4,5,0,1,2,...
   slides.fadeOut().eq(num).fadeIn();
   currentIdx = num;
   pagerBtn.removeClass('active');
@@ -68,7 +68,7 @@ showSlide(0);
 /*
 대상.html() //대상의 html 태그를 반환
 대상.html(tag) //대상의 html 태그를 생성(교체)
-
+ 
 대상.text() //대상의 텍스트 반환
 대상.text(tag) //대상 tag 글씨를 생성(교체)
 */

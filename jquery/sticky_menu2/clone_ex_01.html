@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+
+  <b><span>hell</span><i>text</i></b>
+  <p>, how are you?</p>
+
+  <script>
+    $("b").contents().clone().prependTo("p");
+  </script>
+
+</body>
+
+</html>
