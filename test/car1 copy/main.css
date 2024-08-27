@@ -1,0 +1,21 @@
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면 중앙 배치를 위해 전체 높이 */
+    margin: 0 auto;
+}
+
+#carImage {
+    width: 100%;
+   /* max-width: 1200px; */
+}
+
+#rotateBtn {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+}
