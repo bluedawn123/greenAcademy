@@ -86,7 +86,7 @@ nav ul li ul li {
   color: white;
   position: absolute;
   padding: 10px 20px;
-  bottom: -550%;
+  bottom: -650%;
   font-size: 52px;
   font-weight: bold;
 }
@@ -122,7 +122,7 @@ nav ul li ul li {
   .common_header_phrase {
     color: white;
     position: absolute;
-    bottom: -800%;
+    bottom: -850%;
     font-size: 32px;
     font-weight: bold;
   }
@@ -131,7 +131,7 @@ nav ul li ul li {
 
 @media screen and (max-width: 840px) {
   .common_header {
-    height: 50vh;
+    height: 60vw;
     width: 100%;
     background-image: url(../images/main_header.jpg);
     background-size: cover;
@@ -161,11 +161,12 @@ nav ul li ul li {
 
   nav ul.right_menus li {
     display: inline-block;
-    padding: 3px 10px;
+    padding: 3px 5px;
   }
 
   nav ul.right_menus li .small_menus {
     display: block;
+    font-size: 12px;
   }
 
   .hamburger_menus {
@@ -174,5 +175,12 @@ nav ul li ul li {
     transition: opacity 0.3s, visibility 0.3s;
   }
 
+  .common_header_phrase {
+    color: white;
+    position: absolute;
+    bottom: -50vw;
+    font-size: 32px;
+    font-weight: bold;
+  }
 }
 

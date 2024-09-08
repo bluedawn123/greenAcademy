@@ -8,7 +8,7 @@ header{
 
 }
 .common_header{
-    height: 60vh;
+    height: 70%;
     width: 100%;
     background-image: url(../images/main_header.jpg);
     background-size: cover;
