@@ -4,8 +4,7 @@
   box-sizing: content-box;
   list-style: none;
 }
-header {
-}
+
 .common_header {
   height: 60vh;
   width: 100%;
@@ -22,6 +21,7 @@ header {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 
 nav {
@@ -79,14 +79,15 @@ nav ul li ul li {
 }
 
 .small_menus {
-  display: none;
+  display: none
 }
 
 .common_header_phrase {
   color: white;
   position: absolute;
   padding: 10px 20px;
-  bottom: -650%;
+  left: 0;
+  top: 70%;
   font-size: 52px;
   font-weight: bold;
 }
@@ -119,6 +120,7 @@ nav ul li ul li {
     width: 100px;
     height: 100px;
   }
+
   .common_header_phrase {
     color: white;
     position: absolute;
@@ -145,28 +147,38 @@ nav ul li ul li {
   }
 
   /* small_menus 제외한 nav ul li 숨기기 */
-  nav ul:first-child {
-    display: none;
-  }
-  nav ul.right_menus li:nth-child(-n+3) {
+  nav .left_menus {
     display: none;
   }
 
-   /* small_menus만 보이도록 설정 */
-   nav ul.right_menus {
+  nav .right_menus li:nth-child(-n+3) {
+    display: none;
+  }
+
+  /* small_menus만 보이도록 설정 */
+  nav .right_menus {
     display: flex;
-    justify-content: flex-end; /* 오른쪽 끝으로 정렬 */
-    flex: 1; /* flex 항목이 nav의 나머지 공간을 차지하도록 설정 */
+    justify-content: flex-end;
+    /* 오른쪽 끝으로 정렬 */
+    flex: 1;
+    /* flex 항목이 nav의 나머지 공간을 차지하도록 설정 */
   }
 
-  nav ul.right_menus li {
+  nav .right_menus li {
     display: inline-block;
-    padding: 3px 5px;
+    padding: 3px 10px;
+
   }
 
-  nav ul.right_menus li .small_menus {
+  nav .right_menus .small_menus {
     display: block;
     font-size: 12px;
+  }
+
+  nav .right_menus .small_menus img {
+    width: 25px;
+    height: 25px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
   }
 
   .hamburger_menus {
@@ -183,4 +195,3 @@ nav ul li ul li {
     font-weight: bold;
   }
 }
-
