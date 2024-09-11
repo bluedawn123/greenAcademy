@@ -3,7 +3,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 /* Variable */
-/* :root{
+:root{
 	--gutter : 24px;
 	--main_tt : 48px;
 	--sub_tt : 40px;
@@ -19,7 +19,7 @@
 } */
 
 /* LayOut */
-/* .container{
+.container{
 	width: 70%;
 }
 
@@ -33,9 +33,9 @@
 
 .sub_title_gutter{
 	margin-bottom: var(--gutter);
-} */
+}
 
 /* Typography */
-/* body{
+ body{
 	font:var(--body_tt)/var(--gutter) "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-} */
+}
