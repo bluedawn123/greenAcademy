@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Form Elements With Materialize.css</title>
+  
+  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+          
+  <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="container">
+    <div id="progressbar">
+      <div class="bar orange darken-4"></div>
+      <div class="pct">
+        <span>0</span>% complete
+      </div>
+    </div>
+  <form>
+    <h1>Materialize Form Elements</h1>
+    <div class="input-field col s12">      
+      <select name="" id="location">
+        <option value="" disabled selected>Where would you like to work?</option>
+        <optgroup label="Texas">
+          <option value="Fort Worth">Fort Worth</option>
+          <option value="Odessa">Odessa</option>
+          <option value="Muleshoe">Muleshoe</option>
+        </optgroup>
+        <optgroup label="Oklahoma">
+          <option value="Ardmore">Ardmore</option>
+          <option value="Tulsa">Tulsa</option>
+        </optgroup>
+      </select>
+      <label for="location">Select a location</label>
+    </div>
+    <div class="input-field col s12"> 
+      <label for="category">category</label>
+      <input type="text" id="category" class="ui-button ui-corner-all">
+    </div>
+    <div class="input-field col s12"> 
+      <label for="experience">experience</label>
+      <input type="number" min="1" max="10" id="experience">
+    </div>
+    <div class="input-field col s12"> 
+      <label for="work">When can you start</label>
+      <input type="text" id="work" class="ui-button ui-corner-all">
+    </div>
+    <div class="input-field col s12"> 
+      <fieldset>
+        <legend>How did you hear about us?</legend>     
+
+           
+          
+      
+        <label>
+          <input type="radio" name="referer" value="internet" id="internet">
+          <span>internet</span>
+        </label>
+
+        <label for="tv">
+          <input type="radio" name="referer" value="tv" id="tv">
+          <span>tv</span>
+        </label>
+
+        <label for="other">
+          <input type="radio"  name="referer" value="other" id="other">
+          <span>other</span>
+        </label>
+      </fieldset>
+    </div>
+    <button id="submit" class="btn waves-effect waves-light"  disabled="disabled">Submit
+	<i class="material-icons right">send</i>
+	</button>
+  </form>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="script.js"></script>
+  
+</body>
+</html>
