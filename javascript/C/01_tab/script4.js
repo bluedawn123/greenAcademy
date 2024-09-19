@@ -34,6 +34,5 @@ for (let tm of tabMenu){
         document.querySelector(target).classList.add('active');
 
         console.log(e.target)
-    
     });
 }

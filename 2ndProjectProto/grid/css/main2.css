@@ -1,0 +1,789 @@
+@charset 'utf-8';
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:wght@400;500;600;700&family=Volkhov:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nobile:wght@400;500;700&display=swap");
+
+:root {
+  --footer-color: #1b1b1b;
+  --small-fontsize: 14px;
+  --mid-fontsize: 20px;
+  --white: #fff;
+  --contaier-width: 95%;
+  --shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  --drak-grey: #2e2e2e;
+  --mid-grey: #615f5f;
+  --light-grey: #c4c2c2;
+  --black: #1a1a1a;
+  --darkgreen: #18846C;
+  --darkblack: rgba(0,0,0,0.8);
+  --minRangeValue: 280px; 
+}
+
+h1 {
+  color: #2e2e2e;
+  font-size: 40px;
+  text-shadow: var(--shadow);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: var(--white);
+  font-size: 35px;
+  text-shadow: var(--shadow);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: var(--white);
+  font-size: 30px;
+  text-shadow: var(--shadow);
+  margin-bottom: 30px;
+}
+
+p {
+  color: var(--white);
+  font-size: var(--mid-fontsize);
+  text-shadow: var(--shadow);
+}
+
+a,img:hover{
+  cursor: pointer;
+}
+
+/* 팝업 스타일 */
+a p {
+  margin: 10px 0;  /* 위아래 마진 조정 */
+  font-size: 24px;
+  color: gray;
+  transition: color 0.3s; /* 글자색이 부드럽게 변하도록 설정 */
+}
+
+a:hover p {
+  color: blue; /* 마우스 오버시 글자색을 파란색으로 */
+}
+
+/* a 태그의 디스플레이를 블록 수준으로 변경 */
+a {
+  display: block;
+  text-decoration: none; /* 기본 밑줄 제거 */
+  margin: 10px 0; /* a 태그의 위아래 마진을 설정하여 간격을 맞춤 */
+}
+
+
+
+.hidden-link {
+  position: relative;
+  display: inline-block;
+  width: 100px; /* 클릭 영역의 크기를 지정 */
+  height: 20px;
+  text-indent: -9999px; /* 텍스트를 화면에서 숨김 */
+  overflow: hidden;
+}
+
+.popup-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none; /* 초기에는 숨김 */
+  z-index: 555;
+}
+
+.popup-container p {
+  font-size: 14px;
+  color: #000;
+  text-shadow: none;
+  margin-bottom: 15px;
+}
+
+
+
+
+.popup-content {
+  width: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: popupAnimation 0.3s ease-in-out;
+}
+
+.popup-header {
+  margin-top: 0;
+  font-size: 1.2em;
+  color: #ff0000;
+}
+
+.popup-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.popup-checkbox input {
+  margin-right: 10px;
+}
+
+.popup-close-btn {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-close-btn:hover {
+  background-color: #0056b3;
+}
+
+/* 팝업 애니메이션 */
+@keyframes popupAnimation {
+  0% {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.header_img {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/first_bg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.logo a {
+  width: 65px;
+  height: 65px;
+  background: url(../images/uniqlo_logo.png) no-repeat;
+  display: block;
+  text-indent: -9999em;
+  
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 15%;
+  transition: 0.6s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  transition: all 0.2s;
+}
+
+nav ul {
+  display: flex;
+  gap: 100px;
+  text-shadow: var(--shadow);
+  
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  line-height: 40px;
+  position: relative;
+}
+
+/* 추가 */
+nav > ul > li > ul {
+  position: absolute;
+  display: none;
+  width: 100%;
+}
+
+/* 추가 */
+nav > ul > li ul li {
+  white-space: nowrap;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: var(--shadow);
+}
+
+nav > ul > li:hover ul {
+  display: block;
+  cursor: pointer;
+}
+
+nav > ul > li > ul > li:hover {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.nav_icons {
+  display: flex;
+  gap: 30px;
+  color: var(--white);
+  text-shadow: 0 4px 4px rgba(236, 236, 236, 0.2);
+}
+
+nav.sticky {
+  position: fixed;
+  background: rgba(66, 66, 66, 0.2);
+  z-index: 9999;
+  height: 60px;
+  font-size: var(--mid-fontsize);
+}
+
+.nav_icons .fa-solid {
+  position: relative;
+}
+
+.nav_icons .fa-solid form {
+  position: absolute;
+  display: none;
+}
+
+/* .nav_icons .fa-solid:hover form{
+    position: absolute;
+    display: none;
+} */
+
+/*----------------------- 메인 슬라이드------------------------ */
+
+.slidewrapper {
+  /* margin-top: 20px; */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 110vh;
+}
+
+.slidecontainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  left: 0;
+  height: 110vh;
+
+  /* 이거의 넓이에 따라 옆으로 퍼지는데 이건 slides갯수에 따라 달라지므로 js에서 해결
+    즉, 여기서 넓이를 잡는게 아니다. */
+}
+
+.slidecontainer.animated {
+  transition: left 0.3s;
+}
+
+.slide {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  background: #ccc;
+  text-transform: uppercase;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.slidecontainer li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  list-style: none;
+}
+
+#slide1 {
+  background-image: url(../images/slide_bg6.jpg);
+}
+
+#slide2 {
+  background-image: url(../images/slide_bg2.jpg);
+}
+
+#slide3 {
+  background-image: url(../images/slide_bg3.jpg);
+}
+
+#slide4 {
+  background-image: url(../images/slide_bg4.jpg);
+}
+
+#slide5 {
+  background-image: url(../images/slide_bg5.jpg);
+}
+
+.slidecontainer li .contents {
+  position: absolute;
+  left: 220px;
+  top: 60%;
+  text-align: left;
+}
+
+.sub_price {
+  color: #ff0000;
+  text-shadow: var(--shadow);
+  font-size: 25px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.sub_detail {
+  color: #ff0000;
+  text-shadow: var(--shadow);
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.pager {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 150px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pager a {
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #ccc;
+  text-indent: -9999em;
+  cursor: pointer;
+}
+
+.pager a.active {
+  background: #000;
+}
+
+.btn {
+  width: 140px;
+  background: var(--white);
+  border: none;
+  color: var(--mid-grey); /*#615f5f;*/
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 25px;
+  border-radius: 15px;
+  font-size: var(--mid-fontsize); /*20 */
+  font-weight: bold;
+}
+
+.btn:hover {
+  width: 140px;
+  background: var(--light-grey); /*#c4c2c2;*/
+  border: none;
+  color: var(--white);
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 25px;
+  border-radius: 15px;
+  font-size: var(--mid-fontsize);
+  font-weight: bold;
+}
+/* --------------------announcement------------ */
+
+.announce-container {
+  width: var(--contaier-width);
+  margin: 20px auto;
+}
+
+.announce-wrapper {
+  display: flex;
+  gap: 20px; /* 이미지 사이의 간격 */
+}
+
+.announce-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.announce-wrapper div > img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+/* --------------------------마지막 상품창. 슬라이드 ------------------ */
+.p_container {
+  width: var(--contaier-width);
+  margin: 0 auto;
+}
+
+.p_slide_wrapper {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+.p_slides {
+  height: 420px;
+  /* width:1120px; */
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+.p_slides.animated {
+  left: 0;
+  transition: 0.5s;
+}
+
+.p_slides li {
+  width: 400px;
+  height: 400px;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.p_slides li a,
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p_slides_text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: var(--small-fontsize);
+  bottom: -40px;
+  font-weight: bold;
+  color: var(--drak-grey);
+  /* white-space: pre-line; */
+}
+.p_slides_text a {
+  display: inline-block; 
+  margin-bottom: 5px; 
+}
+
+.p_controls{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.p_controls span {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+
+
+
+
+/*-------------------tab------------------------- */
+
+.tab-container {
+  max-width: 95%;
+  margin: 0 auto;
+  /* position: relative; */
+}
+
+.d-none {
+  display: none;
+}
+
+/* TOOLBAR
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.toolbar{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/*1. 280px로 줄어들면 1fr으로 줄여라. */
+.grid-view{
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--minRangeValue), 1fr));
+}
+
+/* LIST VIEW
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* list-view 가 있을떄 그 안의 figure에  */
+.list-view{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+.list-view figure{
+  display: flex;
+}
+.list-view figure img{
+  width: 200px;
+}
+
+.image-list li{
+  text-align: center;
+}
+
+figcaption{
+  margin-top: 5px;
+}
+
+figcaption p{
+  color: black;
+  font-weight: bold;
+  font-size: var(--small-fontsize);
+}
+figcaption p:nth-child(2){
+  font-weight: bold;
+  color: var(--drak-grey);
+  margin-top: 3px;
+}
+
+.tab-text span{
+  display: inline-block;
+  margin-top: 3px;
+}
+
+
+.tab-text{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: var(--small-fontsize);
+  bottom: -40px;
+  font-weight: bold;
+  color: var(--drak-grey);
+  white-space: pre-line;
+}
+
+.tab-menu {
+  padding-left: 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  
+}
+
+.tab-menu li a {
+  color: #999;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 27px;
+  text-decoration: none;
+  padding: 0 10px;
+  display: block;
+}
+
+.tab-menu li a.tab-active {
+  color: #fff;
+  background: #000;
+}
+
+#tab-content div {
+  display: none;
+}
+
+#tab-content div.tab-active {
+  display: block;
+}
+
+.conditioners{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+
+/* ------------------portfolies------------- */
+.portfolio {
+  margin-top: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.portfolio-container {
+  text-align: left;
+  max-width: 98%;
+  margin: auto;
+  /* position: relative; */
+}
+
+.portfolio-container > div {
+  float: left;
+  width: 50%;
+  height: 750px;
+  background-size: cover;
+  position: relative;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+/* 수업시간에 했던 것처럼 after사용해서 배경 안보이게 하기 */
+.portfolio-container > div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  transition: all 0.3 ease-out;
+}
+
+.portfolio-container > div:hover {
+  transform: scale(1.04);
+  z-index: 999;
+}
+.portfolio-container > div:hover:after {
+  opacity: 1;
+}
+
+.portfolio-item1 {
+  background-image: url(../images/portfolio1.jpg);
+}
+
+.portfolio-item2 {
+  background-image: url(../images/portfolio2.jpg);
+}
+
+.portfolio-item3 {
+  background-image: url(../images/portfolio3.jpg);
+}
+
+.portfolio-item4 {
+  background-image: url(../images/portfolio4.jpg);
+}
+
+.portfolio-text {
+  color: #fff;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: var(--mid-fontsize);
+}
+
+/* #portfolio-main{
+  margin-bottom: 20px;
+} */
+
+.portfolio:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* -----------------------footer-------------------------- */
+footer {
+  width: 100%;
+  background: linear-gradient(to left, #555555, #ffffff);
+  margin-top: 50px;
+  padding: 40px 0;
+}
+.footer_container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sitemaps {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  gap: 70px;
+}
+
+footer .company {
+  width: 30%;
+}
+
+footer .company p {
+  color: var(--footer-color);
+  margin-top: 14px;
+  font-size: var(--small-fontsize);
+  line-height: 2;
+  white-space: pre-line;
+}
+
+.sitemaps dt {
+  font-size: var(--mid-fontsize);
+  line-height: 1.24;
+  color: var(--footer-color);
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.sitemaps dd {
+  color: var(--footer-color);
+  font-size: var(--small-fontsize);
+  line-height: 1.24;
+  font-weight: 500;
+  text-align: center;
+}
+.sitemaps dd + dd {
+  margin-top: 12px;
+}
+/* footer nav dd a{
+  
+} */
+
+footer > p {
+  color: var(--footer-color);
+  margin-top: 44px;
+  text-align: center;
+  font-size: var(--small-fontsize);
+  line-height: 1.24;
+}
