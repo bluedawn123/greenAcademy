@@ -17,6 +17,8 @@
   --darkgreen: #18846C;
   --darkblack: rgba(0,0,0,0.8);
   --minRangeValue: 280px; 
+  --minRangeValue2: 560px; 
+
 }
 
 h1 {
@@ -543,7 +545,7 @@ img {
 .grid-view{
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(var(--minRangeValue), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--minRangeValue), 2fr));
 }
 
 /* LIST VIEW

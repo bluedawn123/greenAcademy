@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>그리드 커스텀1</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="main.js"></script>
+  <script type="module" src="main.js"></script>
+</head>
+
+<body>
+
+  <div class="tab-container">
+    <div class="toolbar" style="display: none;">
+      <div class="search-wrapper">
+        <input type="search" placeholder="상품검색" />
+      </div>
+    </div>
+    <div class="tab-nav">
+      <ul class="tab-menu">
+        <li>
+          <a href="top10" class="tab-active">
+            <img src="images/Menu.svg" alt="Car Icon" style="width: 25px; height: 25px; margin : auto;" /> Top10
+          </a>
+        </li>
+        <li>
+          <a href="자동차">
+            <img src="images/Car.svg" alt="Car Icon" style="width: 25px; height: 25px; margin : auto;" /> 자동차
+          </a>
+        </li>
+        <li>
+          <a href="라이프">
+            <img src="images/Jumping.svg" alt="Jumping Icon" style="width: 25px; height: 25px; margin : auto;" /> 라이프
+          </a>
+        </li>
+        <li>
+          <a href="중고차">
+            <img src="images/Recycle.svg" alt="Jumping Icon" style="width: 25px; height: 25px; margin : auto;" /> 중고차
+          </a>
+        </li>
+        <li>
+          <a href="커피&베이커리">
+            <img src="images/Coffee.svg" alt="Jumping Icon" style="width: 25px; height: 25px; margin : auto;" /> 커피&베이커리
+          </a>
+        </li>
+        <li>
+          <a href="보험">
+            <img src="images/Car Insurance.svg" alt="Jumping Icon" style="width: 25px; height: 25px; margin : auto;" /> 보험
+          </a>
+        </li>
+        <li>
+          <a href="쇼핑">
+            <img src="images/Shopping Cart.svg" alt="Jumping Icon" style="width: 25px; height: 25px; margin : auto;" /> 쇼핑
+          </a>
+        </li>
+        <li>
+          <a href="주유&충전">
+            <img src="images/Charging Battery.svg" alt="Jumping Icon" style="width: 25px; height: 25px; margin : auto;" /> 주유&충전
+          </a>
+        </li>
+        <li>
+          <a href="외식">
+            <img src="images/food.svg" alt="Jumping Icon" style="width: 25px; height: 25px; margin : auto;" /> 외식
+          </a>
+        </li>
+      </ul>
+      <span class="highlight"></span>
+    </div>
+    <select name="price__selector" id="price__selector" style="display: none;">
+      <option>Top 10</option>
+      <option>낮은 가격순</option>
+      <option>높은 가격순</option>
+    </select>
+
+    <ol class="image-list grid-view"></ol>
+
+  </div>
+
+</body>
+
+</html>

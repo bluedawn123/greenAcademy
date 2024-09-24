@@ -5,12 +5,13 @@
     <title>그리드 커스텀1</title>
     <link rel="stylesheet" href="./style.css" />
     <script defer src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </head>
 
   <body>
 
       <div class="tab-container">
-        <div class="toolbar">
+        <div class="toolbar" style="display: none;">
           <div class="search-wrapper">
             <input type="search" placeholder="상품검색" />
           </div>
@@ -22,16 +23,21 @@
             <li><a href="women">women</a></li>
             <li><a href="kids">kids</a></li>
             <li><a href="baby">baby</a></li>
+            <li><a href="men">men</a></li>
+            <li><a href="women">women</a></li>
+            <li><a href="kids">kids</a></li>
+            <li><a href="baby">baby</a></li>
           </ul>
           <span class="highlight"></span>
         </div>
-        <select name="price__selector" id="price__selector">
+        <select name="price__selector" id="price__selector" style="display: none;">
           <option>Top 10</option>
           <option>낮은 가격순</option>
           <option>높은 가격순</option>
         </select>
 
         <ol class="image-list grid-view"></ol>
+        
       </div>
 
   </body>

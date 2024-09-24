@@ -181,6 +181,7 @@ product1.slice(0, 10).forEach(item => {
 imageList.innerHTML = newHtml
 
 
+
 const captionArr = []; //새배열생성
 const captions = imageList.querySelectorAll('figcaption p:first-child') //각 개체의 제목들
 const images = imageList.querySelectorAll('figure img')
@@ -215,106 +216,6 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log(top10);
-
-
-
-
-
-
-
-// ///////////////////////////////////////가격정렬을 만들어보자/////////////////////////
-const priceSelector = document.querySelector("#price__selector");
-priceSelector.addEventListener("change", (e) => {
-    if (e.target.value == "낮은 가격순") {
-        console.log(e.target.value)
-        //낮은가격순일때 할일
-        //모든 아이템을 일단 없애준다.
-        imageListItem.forEach((item, idx, all) => {
-            item.classList.add(dnone)
-        })
-
-        //내림차순을 만들어준다.
-        const newCaptionArr1 = [...captionArr];
-        newCaptionArr1.sort((a, b) => {
-            return a.price - b.price;
-        });
-
-        console.log(newCaptionArr1) //price 기준 low -> high로 새로운 배열이 모두 나온다.
-
-        let lowtoHighPriceHtml = '';
-
-        newCaptionArr1.slice(0, 10).forEach(item => {
-            lowtoHighPriceHtml +=
-                `<li>
-            <figure>
-              <img src="${item.url}" alt="">
-              <figcaption>
-                <p>${item.text}</p>
-                <p>Photo by <a href="https://unsplash.com/@${item.maker}" target="_blank">${item.maker}</a></p>
-                <p>${item.price}</p>
-              </figcaption>
-            </figure>
-          </li>`
-        })
-        imageList.innerHTML = lowtoHighPriceHtml
-
-    } else if (e.target.value == "높은 가격순") {
-        //모든 아이템을 일단 없애준다.
-        imageListItem.forEach((item, idx, all) => {
-            item.classList.add(dnone)
-        })
-
-        //내림차순을 만들어준다.
-        const newCaptionArr2 = [...captionArr];
-        newCaptionArr2.sort((a, b) => {
-            return b.price - a.price;
-        });
-
-        let HighToLowPrice = '';
-        newCaptionArr2.slice(0, 10).forEach(item => {
-            HighToLowPrice +=
-                `<li>
-            <figure>
-              <img src="${item.url}" alt="">
-              <figcaption>
-                <p>${item.text}</p>
-                <p>Photo by <a href="https://unsplash.com/@${item.maker}" target="_blank">${item.maker}</a></p>
-                <p>${item.price}</p>
-              </figcaption>
-            </figure>
-          </li>`
-        })
-        imageList.innerHTML = HighToLowPrice
-
-
-    } else { //신상품. id순으로 하면된다. 
-        imageListItem.forEach(item => {
-            item.classList.remove(dnone)
-        })
-
-        const newCaptionArr3 = [...top10];
-
-        let newItems = '';
-
-        newCaptionArr3.forEach(item => {
-            newItems +=
-                `<li>
-            <figure>
-              <img src="${item.url}" alt="">
-              <figcaption>
-                <p>${item.text}</p>
-                <p>Photo by <a href="https://unsplash.com/@${item.maker}" target="_blank">${item.maker}</a></p>
-                <p>${item.price}</p>
-              </figcaption>
-            </figure>
-          </li>`
-        })
-        imageList.innerHTML = newItems
-    }
-});
-
-
-////////////////////////////////////////////탭메뉴 연동///////////////////////////////////////
 
 
 
@@ -481,34 +382,98 @@ for (let tm of tabMenu) {
     });
 }
 
-searchInput.addEventListener('change', (e) => {
-    let keywords = e.target.value
-
-    let filteredArr = [];
 
 
 
 
-    if (searchTargetArr.length > 0) {
-        filteredArr = searchTargetArr.filter(caption => caption.title.includes(keywords));
+// ///////////////////////////////////////가격정렬을 만들어보자/////////////////////////
+const priceSelector = document.querySelector("#price__selector");
+priceSelector.addEventListener("change", (e) => {
+    if (e.target.value == "낮은 가격순") {
+        console.log(e.target.value)
+        //낮은가격순일때 할일
+        //모든 아이템을 일단 없애준다.
+        imageListItem.forEach((item, idx, all) => {
+            item.classList.add(dnone)
+        })
 
-    } else{
-        filteredArr = captionArr.filter(caption => caption.title.includes(keywords));
+        //내림차순을 만들어준다.
+        const newCaptionArr1 = [...captionArr];
+        newCaptionArr1.sort((a, b) => {
+            return a.price - b.price;
+        });
+
+        console.log(newCaptionArr1) //price 기준 low -> high로 새로운 배열이 모두 나온다.
+
+        let lowtoHighPriceHtml = '';
+
+        newCaptionArr1.slice(0, 10).forEach(item => {
+            lowtoHighPriceHtml +=
+                `<li>
+            <figure>
+              <img src="${item.url}" alt="">
+              <figcaption>
+                <p>${item.text}</p>
+                <p>Photo by <a href="https://unsplash.com/@${item.maker}" target="_blank">${item.maker}</a></p>
+                <p>${item.price}</p>
+              </figcaption>
+            </figure>
+          </li>`
+        })
+        imageList.innerHTML = lowtoHighPriceHtml
+
+    } else if (e.target.value == "높은 가격순") {
+        //모든 아이템을 일단 없애준다.
+        imageListItem.forEach((item, idx, all) => {
+            item.classList.add(dnone)
+        })
+
+        //내림차순을 만들어준다.
+        const newCaptionArr2 = [...captionArr];
+        newCaptionArr2.sort((a, b) => {
+            return b.price - a.price;
+        });
+
+        let HighToLowPrice = '';
+        newCaptionArr2.slice(0, 10).forEach(item => {
+            HighToLowPrice +=
+                `<li>
+            <figure>
+              <img src="${item.url}" alt="">
+              <figcaption>
+                <p>${item.text}</p>
+                <p>Photo by <a href="https://unsplash.com/@${item.maker}" target="_blank">${item.maker}</a></p>
+                <p>${item.price}</p>
+              </figcaption>
+            </figure>
+          </li>`
+        })
+        imageList.innerHTML = HighToLowPrice
+
+
+    } else { //신상품. id순으로 하면된다. 
+        imageListItem.forEach(item => {
+            item.classList.remove(dnone)
+        })
+
+        const newCaptionArr3 = [...top10];
+
+        let newItems = '';
+
+        newCaptionArr3.forEach(item => {
+            newItems +=
+                `<li>
+            <figure>
+              <img src="${item.url}" alt="">
+              <figcaption>
+                <p>${item.text}</p>
+                <p>Photo by <a href="https://unsplash.com/@${item.maker}" target="_blank">${item.maker}</a></p>
+                <p>${item.price}</p>
+              </figcaption>
+            </figure>
+          </li>`
+        })
+        imageList.innerHTML = newItems
     }
-    console.log(filteredArr)
-    console.log(captionArr)
-    
-    let imageListItem = imageList.querySelectorAll('li')
-    imageListItem.forEach((item, idx, all) => {
-        item.classList.add(dnone)
-    })
+});
 
-    for (let item of filteredArr) {
-        
-        
-        imageListItem[item.id].classList.remove('d-none');
-    }
-    //count 갯수변경
-    count.innerText = filteredArr.length;
-
-})

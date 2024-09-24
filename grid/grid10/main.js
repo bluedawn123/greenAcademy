@@ -12,7 +12,6 @@ let product1 = [{
     url: "images/men2.jpg",
     type: 'men'
 },
-
 {
     id: 2,
     price: 130000,
@@ -139,6 +138,78 @@ let product1 = [{
     url: "images/men8.jpg",
     type: 'men'
 },
+{
+    id: 20,
+    price: 78000,
+    title: "화이트 데님 팬츠",
+    url: "images/men9.jpg",
+    type: 'men'
+},
+{
+    id: 21,
+    price: 99000,
+    title: "블랙 스트라이프 셔츠",
+    url: "images/women5.jpg",
+    type: 'women'
+},
+{
+    id: 22,
+    price: 120000,
+    title: "레이스 블라우스",
+    url: "images/women6.jpg",
+    type: 'women'
+},
+{
+    id: 23,
+    price: 67000,
+    title: "키즈 그린 티셔츠",
+    url: "images/kids5.jpg",
+    type: 'kids'
+},
+{
+    id: 24,
+    price: 45000,
+    title: "키즈 레드 팬츠",
+    url: "images/kids6.jpg",
+    type: 'kids'
+},
+{
+    id: 25,
+    price: 20000,
+    title: "베이비 옐로우 팬츠",
+    url: "images/baby5.jpg",
+    type: 'baby'
+},
+{
+    id: 26,
+    price: 18000,
+    title: "베이비 핑크 블라우스",
+    url: "images/baby6.jpg",
+    type: 'baby'
+},
+{
+    id: 27,
+    price: 50000,
+    title: "네이비 스트라이프 셔츠",
+    url: "images/men10.jpg",
+    type: 'men'
+},
+{
+    id: 28,
+    price: 72000,
+    title: "플로럴 드레스",
+    url: "images/women7.jpg",
+    type: 'women'
+},
+{
+    id: 29,
+    price: 60000,
+    title: "블루 스니커즈",
+    url: "images/kids7.jpg",
+    type: 'kids'
+}
+
+
 ];
 
 
