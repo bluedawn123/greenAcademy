@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product technology</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/product.css">
+</head>
+
+
+<body>
+  <!--Header 나승일-->
+  <header>
+    <div class="top_nav white bbb">
+      <div class="nav_container">
+        <h1 class="logo"><a href="index.html">hyundae</a></h1>
+        <a href="#" class="hamburger_button">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <div class="nav">
+          <ul class="main_menu">
+            <li class="main_list"><p>회사소개</p>
+              <ul class="sub_menu">
+                <li id="about"><a href="aboutcompany.html">사업소개</a></li>
+                <li><a href="aboutcompany.html">사업장</a></li>
+                <li><a href="aboutcompany.html">CEO인사말</a></li>
+                <li><a href="aboutcompany.html">경영이념</a></li>
+                <li><a href="aboutcompany.html">연혁</a></li>
+                <li><a href="aboutcompany.html">R&D연구소</a></li>
+              </ul>
+            </li>
+            <li class="main_list"><p>제품기술</p>
+              <ul class="sub_menu">
+                <li id="product"><a href="product.html">제품목록</a></li>
+                <li><a href="product.html">종합 카탈로그</a></li>
+                <li><a href="product.html">생산공정</a></li>
+              </ul>
+            </li>
+            <li class="main_list"><p>투자정보</p>
+              <ul class="sub_menu">
+                <li><a href="#">전자공고</a></li>
+                <li><a href="#">요약재무제표</a></li>
+                <li><a href="#">신용등급</a></li>
+                <li><a href="#">사업보고서</a></li>
+                <li><a href="#">경영정보</a></li>
+              </ul>
+            </li>
+            <li class="main_list"><p>지속가능경영</p>
+              <ul class="sub_menu">
+                <li><a href="csr.html">탄소중립 로드맵</a></li>
+                <li><a href="csr.html">지속가능 전략</a></li>
+                <li><a href="csr.html">통합보고서</a></li>
+                <li id="csr"><a href="csr.html">사회공헌</a></li>
+              </ul>
+            </li>
+            <li class="main_list"><p>홍보센터</p>
+              <ul class="sub_menu">
+                <li id="newscenter"><a href="newscenter.html">뉴스센터</a></li>
+                <li><a href="newscenter.html">youtube</a></li>
+                <li><a href="newscenter.html">소식지</a></li>
+                <li><a href="newscenter.html">스포츠단</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- tablet메뉴 -->
+    <div class="tb_container">
+      <div class="tb_nav">
+        <ul>
+          <li><p>회사소개 <span>+</span></p>
+            <ul class="tb_list">
+              <li><a href="aboutcompany.html">사업소개</a></li>
+              <li><a href="aboutcompany.html">사업창</a></li>
+              <li><a href="aboutcompany.html">CEO인사말</a></li>
+              <li><a href="aboutcompany.html">경영이념</a></li>
+              <li><a href="aboutcompany.html">연혁</a></li>
+              <li><a href="aboutcompany.html">R&D연구소</a></li>
+            </ul>
+          </li>
+          <li><p>제품기술 <span>+</span></p>
+            <ul class="tb_list">
+              <li><a href="product.html">제품목록</a></li>
+              <li><a href="product.html">종합카탈로그</a></li>
+              <li><a href="product.html">생산공정</a></li>
+            </ul>
+          </li>
+          <li><p>투자정보 <span>+</span></p>
+            <ul class="tb_list">
+              <li><a href="#">전자공고</a></li>
+              <li><a href="#">요약재무제표</a></li>
+              <li><a href="#">신용등급</a></li>
+              <li><a href="#">사업보고서</a></li>
+              <li><a href="#">경영정보</a></li>
+            </ul>
+          </li>
+          <li><p>지속가능경영 <span>+</span></p>
+            <ul class="tb_list">
+              <li><a href="csr.html">탄소중립로드맵</a></li>
+              <li><a href="csr.html">지속가능전략</a></li>
+              <li><a href="csr.html">통합보고서</a></li>
+              <li><a href="csr.html">사회공헌</a></li>
+            </ul>
+          </li>
+          <li><p>홍보센터 <span>+</span></p>
+            <ul class="tb_list">
+              <li><a href="newscenter.html">뉴스센터</a></li>
+              <li><a href="newscenter.html">youtube</a></li>
+              <li><a href="newscenter.html">소식지</a></li>
+              <li><a href="newscenter.html">스포츠단</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 퀵메뉴 -->
+    <div class="quick-menu">
+      <div class="quick-menu-btn">
+        <span>+</span>
+      </div>
+      <ul class="quick-menu-list">
+        <li><a href="#"><i class="fa-solid fa-question"></i></a>
+          <a href="#">제품문의</a>
+        </li>
+        <li><a href="#"><i class="fa-solid fa-user-plus"></i></a>
+          <a href="#">인재채용</a>
+        </li>
+        <li><a href="#"><i class="fa-solid fa-rotate"></i></a>
+          <a href="#">지속가능</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- TOP 버튼 -->
+    <button id="top_btn"><i class="fa-solid fa-angles-up"></i></button>
+    <!-- progress bar -->
+    <div id="progress_bar"></div>
+  </header>
+  <!--//Header 나승일-->
+
+  <!-- main 홍수진 -->
+  <main>
+    <div id="main_container">
+      <!-- 서브bg,메뉴 -->
+
+      <div class="sub_tt parallax-window" data-parallax="scroll"
+        data-image-src="images/product/subnav_product_technology.jpg">
+        <h2 class="sub_prx_txt">제품기술</h2>
+        <h4 class="sub_prx_txt">미래를 여는 신기술, <span>새로운 철강시대를 이끌어갑니다.</span></h4>
+      </div>
+
+      <div class="tab_menu">
+        <ul>
+          <li><a href="#">제품 목록</a></li>
+          <li><a href="#">종합 카탈로그</a></li>
+          <li><a href="#">생산공정</a></li>
+        </ul>
+      </div>
+
+      <!-- //서브메뉴 -->
+
+      <!-- section 01 -->
+      <section class="section1">
+        <div class="sec1_wrapper">
+          <div class="sec1_wrap sec1_swiper">
+            <div class="sec1_title">
+              <h3 class="sec_pc">현대제철은 ‘철 그 이상의 가치창조’를 목표로<br>
+                고객의 기대를 넘어서는 차별화된 제품 개발에 주력하고 있습니다.</h3>
+              <h3 class="sec_mo">현대제철은 자동차소재 전문 제철소로<br>
+                강도가 높으면서도 더 가벼운<br>
+                차세대 강판 개발에 주력하고 있습니다.</h3>
+              <div class="sec1_progress-box">
+                <div class="sec1_pager"></div>  
+                <div class="autoplay-progress">
+                    <svg viewBox="0 0 950 10"  xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="5" x2="950" y2="5"/>
+                    </svg>
+                </div>
+            </div>
+            </div>
+            <div class="sec1_desc swiper-wrapper">
+              <div class="sec1_slide01 swiper-slide">
+                <div class="sec1_img_wrapper">
+                  <img src="images/product/sec1_hcore_brickwell.jpg"
+                    alt="안전한 건설을 생각하는 현대제철의 프리미엄 강재 H CORE를 사용해서 건설한 브릭웰 건물입니다.">
+                </div>
+                <h3>안전을 심은 철, 안심 H CORE</h3>
+                <p><span>작은 바람에도 예민한 초고층 빌딩,
+                  </span> 수만 명을 지탱하는 초대형 복합몰도
+                  안심하고 설계 할 수 있도록
+                  <br>안정적인 강재를 넘어 안전한 건설을 생각하는
+                  현대제철의 프리미엄 강재 H CORE
+                </p>
+              </div>
+              <div class="sec1_slide02 swiper-slide">
+                <div class="sec1_img_wrapper">
+                  <img src="images/product/sec1_hsolution.jpg" alt="고객에 원하는 자동차의 조건에 맞춰 솔루션을 풀어내는 H solution 입니다.">
+                </div>
+                <h3>고객 맞춤형 자동차 솔루션 <span>H SOLUTION</span></h3>
+                <p>자동차 소재기술과 응용기술을 적용한
+                  ‘고객 맞춤형 솔루션’ H Solution은
+                  <br>기획·설계부터 생산·판매까지의 모든 프로세스에서
+                  <span>차별화된 자동차 응용기술을 개발하여 제공합니다</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //section 01끝 -->
+
+      <!-- section 02 -->
+      <section class="section2">
+        <div class="sec2_wrap">
+          <div class="sec2_title">
+            현대제철은
+            다양한 분야의 요구와
+            <span> 급변하는 시장에 맞춰</span>
+            <span>최적의 환경 조성을 위해</span>
+            끊임없이 노력합니다.
+          </div>
+
+          <div class="sec2_desc">
+            <div class="sec2_list01 sec2_swiper01">
+              <ul class="sec2_productlist01 swiper-wrapper">
+                <li class="sec2_list_plate swiper-slide">
+                  <h4>후판</h4>
+                  <p>두께 6mm이상의 두꺼운 강판으로 반제품 슬래브에 후속공정을 거쳐 제작됩니다.</p>
+                </li>
+                <li class="sec2_list_hot swiper-slide">
+                  <h4>열연</h4>
+                  <p>열연은 반제품인 슬래브를 가열해 압연 후
+                    코일 형태로 감은 열연 강판입니다.</p>
+                </li>
+                <li class="sec2_list_cold swiper-slide">
+                  <h4>냉연</h4>
+                  <p>열연을 상온에서 압연한 강판으로 까다로운 생산과정탓에 '철강제품의 꽃'이라 불립니다.</p>
+                </li>
+                <li class="sec2_list_car swiper-slide">
+                  <h4>자동차 경량화 부품</h4>
+                  <p>자동차의 연비를 개선하고 동시에 안전향상까지 가능한 첨단 제품입니다.</p>
+                </li>
+                <li class="sec2_list_steel swiper-slide">
+                  <h4>철근</h4>
+                  <p>축 방향의 돌기와 횡 방향으로 일정한 마디가
+                    콘크리트 부착력을 더욱 높인 제품입니다.</p>
+                </li>
+                <li class="sec2_list_hbeam swiper-slide">
+                  <h4>형강</h4>
+                  <p>단면의 형태가 일정하도록 압연해 만든
+                    제품으로 건축물에 핵심으로 사용됩니다.</p>
+                </li>
+                <li class="sec2_list_speacial swiper-slide">
+                  <h4>특수강</h4>
+                  <p>크랭크샤프트, 콘로드 및 각종 기어류 등
+                    핵심 부품에 사용되는 특수강입니다.</p>
+                </li>
+                <li class="sec2_list_caterpillar swiper-slide">
+                  <h4>중기계</h4>
+                  <p>무한궤도는 굴삭기 바닥 접지력을 높여주며
+                    굴삭기 성능을 결정짓는 중요 부품입니다.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="sec2_list02 sec2_swiper02">
+              <ul class="sec2_productlist02 swiper-wrapper">
+                <li class="sec2_list_steel swiper-slide">
+                  <h4>후판</h4>
+                  <p>두께 6mm이상의 두꺼운 강판으로 반제품 슬래브에 후속공정을 거쳐 제작됩니다.</p>
+                </li>
+                <li class="sec2_list_hot swiper-slide">
+                  <h4>열연</h4>
+                  <p>열연은 반제품인 슬래브를 가열해 압연 후
+                    코일 형태로 감은 열연 강판입니다.</p>
+                </li>
+                <li class="sec2_list_cold swiper-slide">
+                  <h4>냉연</h4>
+                  <p>열연을 상온에서 압연한 강판으로 까다로운 생산과정탓에 ’철강제품의 꽃’이라 불립니다.</p>
+                </li>
+                <li class="sec2_list_car swiper-slide">
+                  <h4>자동차 경량화 부품</h4>
+                  <p>자동차의 연비를 개선하고 동시에 안전향상까지 가능한 첨단 제품입니다.</p>
+                </li>
+                <li class="sec2_list_steel swiper-slide">
+                  <h4>철근</h4>
+                  <p>축 방향의 돌기와 횡 방향으로 일정한 마디가
+                    콘크리트 부착력을 더욱 높인 제품입니다.</p>
+                </li>
+                <li class="sec2_list_hbeam swiper-slide">
+                  <h4>형강</h4>
+                  <p>단면의 형태가 일정하도록 압연해 만든
+                    제품으로 건축물에 핵심으로 사용됩니다.</p>
+                </li>
+                <li class="sec2_list_speacial swiper-slide">
+                  <h4>특수강</h4>
+                  <p>크랭크샤프트, 콘로드 및 각종 기어류 등
+                    핵심 부품에 사용되는 특수강입니다.</p>
+                </li>
+                <li class="sec2_list_caterpillar swiper-slide">
+                  <h4>중기계</h4>
+                  <p>무한궤도는 굴삭기 바닥 접지력을 높여주며
+                    굴삭기 성능을 결정짓는 중요 부품입니다.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //section 02끝 -->
+
+      <!-- section 03 -->
+      <section class="section3 px-5">
+        <div class="sec3_wrap">
+          <div class="sec3_title">
+            <h2 class="pb-5">제품 안전 및 적합성,
+              현대제철의 분야별 인증을 확인하세요.
+            </h2>
+          </div>
+        </div>
+        <div class="sec3_listwrap sec3swiper">
+          <div class="sec3_desc swiper-wrapper">
+            <div class="sec3_ks swiper-slide">
+              <a href="#">
+                <img src="images/product/sec3_certification_KS.jpg" alt="">
+                <h4>KS</h4>
+                <p>공장별 KS 국내 인증</p>
+              </a>
+            </div>
+            <div class="sec3_jis swiper-slide">
+              <a href="#">
+                <img src="images/product/sec3_certification_JIS.jpg" alt="">
+                <h4>JIS</h4>
+                <p>공장별 JIS 일본 인증</p>
+              </a>
+            </div>
+            <div class="sec3_kr swiper-slide">
+              <a href="#">
+                <img src="images/product/sec3_certification_KR.jpg" alt="">
+                <h4>선급</h4>
+                <p>각 나라별 선급 인증</p>
+              </a>
+            </div>
+            <div class="sec3_kolas swiper-slide">
+              <a href="#">
+                <img src="images/product/sec3_certification_KOLAS.jpg" alt="">
+                <h4>KOLAS</h4>
+                <p>국제공인시험기관 인증</p>
+              </a>
+            </div>
+            <div class="sec3_ce swiper-slide">
+              <a href="#">
+                <img src="images/product/sec3_certification_CE.jpg" alt="">
+                <h4>기타</h4>
+                <p>기타 나라별 인증</p>
+              </a>
+            </div>
+          </div>
+          <div class="sec3_pager swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- //section 03끝 -->
+    </div>
+  </main>
+
+ 
+  <!--푸터-->
+
+
+ <!--Footer 장지훈 -->
+ <footer class="px-md-5">
+  <div class="container">
+    <div class="ft-1 d-flex justify-content-between align-items-end mb-3">
+      <div class="footer_left d-flex flex-column">
+        <h3 class="logo"><a href="">logo</a></h3>
+        <address>경기도 성남시 분당구 분당내곡로 117,<br>
+          그레이츠 판교(GREITS PANGYO) 9층 </address>
+        <ul class="d-flex justify-content-between">
+          <li><a href=""><strong>사이트 안내</strong></a></li>
+          <li><a href="">개인정보 취급방침</a></li>
+          <li><a href="">개인정보 처리방침</a></li>
+          <li><a href="">사이버 감사실</a></li>
+          <li><a href="">이용약관</a></li>
+        </ul>
+      </div>
+      <ul class="d-flex justify-content-between">
+        <li><a href="">제품 문의</a></li>
+        <li><a href="">인재 채용</a></li>
+        <li><a href="">지속 가능</a></li>
+      </ul>
+    </div>
+    <div class="sns d-flex justify-content-between align-items-center">
+      <div class="snsBtn">
+        <a href="#" target="_blank"><img src="images/footer/insta.svg" alt="현대제철 인스타그램 SNS"></a>
+        <a href="#" target="_blank"><img src="images/footer/facebook.svg" alt="현대제철 페이스북 SNS"></a>
+        <a href="#" target="_blank"><img src="images/footer/youtube.svg" alt="현대제철 유튜브 SNS"></a>
+      </div>
+      <div class="familysite">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#popup">
+          Family site <span>+</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <p class="copyright">© Copyright 2024. All Rights Reserved.</p>
+
+
+  <!-- Button trigger modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="popup" tabindex="-1"  aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <span class="tit">FAMILY SITE</span>
+          <dl>
+            <dt><strong>현대자동차그룹</strong></dt>
+            <dd><a href="#">현대자동차그룹</a></dd>
+            <dd><a href="#">현대차 정몽구 재단</a></dd>
+            <dd><a href="#">현대차 미소금융재단</a></dd>
+            <dd><a href="#">현대·기아차 동반성장</a></dd>
+            <dd><a href="#">글로벌경영연구소</a></dd>
+            <dd><a href="#">해피무브 글로벌 청년봉사단</a></dd>
+          </dl>
+          <dl>
+            <dt><strong>완성차</strong></dt>
+            <dd><a href="#" target="_blank">현대자동차</a></dd>
+            <dd><a href="#" target="_blank">기아자동차</a></dd>
+            <dd><a href="#" target="_blank">제네시스</a></dd>
+          </dl>
+          <dl>
+            <dt><strong>철강</strong></dt>
+            <dd><a href="#" target="_blank">현대제철</a></dd>
+            <dd><a href="#" target="_blank">현대비앤지스틸</a></dd>
+            <dd><a href="#" target="_blank">현대종합특수강</a></dd>
+          </dl>
+          <dl>
+            <dt><strong>건설</strong></dt>
+            <dd><a href="#" target="_blank">현대건설</a></dd>
+            <dd><a href="#" target="_blank">현대엔지니어링</a></dd>
+            <dd><a href="#" target="_blank">현대스틸산업</a></dd>
+            <dd><a href="#" target="_blank">현대종합설계</a></dd>
+            <dd><a href="#" target="_blank">현대도시개발</a></dd>
+          </dl>
+          <dl>
+            <dt><strong>부품</strong></dt>
+            <dd><a href="#" target="_blank">현대모비스</a></dd>
+            <dd><a href="#" target="_blank">현대트랜시스</a></dd>
+            <dd><a href="#" target="_blank">현대위아</a></dd>
+            <dd><a href="#" target="_blank">현대케피코</a></dd>
+            <dd><a href="#" target="_blank">현대엠시트</a></dd>
+            <dd><a href="#" target="_blank">현대아이에이치엘</a></dd>
+            <dd><a href="#" target="_blank">현대파텍스</a></dd>
+          </dl>
+          <dl>
+            <dt><strong>금융</strong></dt>
+            <dd><a href="#" target="_blank">현대캐피탈</a></dd>
+            <dd><a href="#" target="_blank">현대카드</a></dd>
+            <dd><a href="#" target="_blank">현대커머셜</a></dd>
+            <dd><a href="#" target="_blank">현대차증권</a></dd>
+            <dd><a href="#" target="_blank">현대라이프</a></dd>
+          </dl>
+          <dl>
+            <dt><strong>기타</strong></dt>
+            <dd><a href="#" target="_blank">현대글로비스</a></dd>
+            <dd><a href="#" target="_blank">현대로템</a></dd>
+            <dd><a href="#" target="_blank">이노션 월드와이드</a></dd>
+            <dd><a href="#" target="_blank">해비치호텔&amp;리조트</a></dd>
+            <dd><a href="#" target="_blank">현대엔지비</a></dd>
+            <dd><a href="#" target="_blank">현대서산농장</a></dd>
+            <dd><a href="#" target="_blank">지아이티</a></dd>
+            <dd><a href="#" target="_blank">지마린서비스</a></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!--//Footer 장지훈 -->
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/product.js"></script>
+
+</body>
+
+</html>
