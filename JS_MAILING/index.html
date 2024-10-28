@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <h1>Mail Form</h1>
+  <h2>관리자에게 이메일 보내기</h2>
+  <form action="" id="contact-form">
+    <div>
+      <label for="name">이름 : </label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="email">이메일 : </label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="msg">메세지 : </label>
+      <input type="text" id="msg" name="msg" required>
+    </div>
+    <button>전송</button>
+  </form>
+  <hr>
+  <h2>회원에게 메일 보내기</h2>
+  <form action="" id="contact-form2">
+    <div>
+      <label for="name">이름 : </label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="to_email"> 수신 이메일 : </label>
+      <input type="email" id="to_email" name="to_email" required>
+    </div>
+    <div>
+      <label for="msg">본문 : </label>
+      <input type="text" id="msg" name="msg" required>
+    </div>
+    <button>전송</button>
+  </form>
+  <script>
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "TOO6m5tgEizDU7RkE",
+        });
+    })();
+</script>
+<script >
+  
+  
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // these IDs from the previous steps
+        emailjs.sendForm('service_x9pm8fc', 'template_7o6913g', this)
+            .then(() => {
+                console.log('SUCCESS!');
+                alert('메일발송완료');
+            }, (error) => {
+                console.log('FAILED...', error);
+                alert('메일발송실패');
+
+            });
+    });
+
+    document.getElementById('contact-form2').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // these IDs from the previous steps
+      emailjs.sendForm('service_x9pm8fc', 'template_lul9rtr', this)
+          .then(() => {
+              console.log('SUCCESS!');
+              alert('메일발송완료');
+          }, (error) => {
+              console.log('FAILED...', error);
+              alert('메일발송실패');
+
+          });
+  });
+
+</script>
+</body>
+</html>

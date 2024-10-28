@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    // JSX 대신 React.createElement로 컴포넌트 작성
+    function MyApp() {
+      return React.createElement('h1', null, 'Hello World');
+    }
+
+    const container = document.querySelector('#root');
+    const root = ReactDOM.createRoot(container);
+    // JSX 대신 React.createElement로 MyApp 컴포넌트를 렌더링
+    root.render(React.createElement(MyApp));
+  </script>
+</body>
+</html>
