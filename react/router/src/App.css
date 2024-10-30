@@ -1,0 +1,6 @@
+nav li a{
+  text-decoration: none;
+}
+nav li a.active{
+  text-decoration: underline;
+}
