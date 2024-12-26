@@ -6,6 +6,7 @@ import './App.css';
 
 function App(){
  
+  let [입력값, 입력값변경] = useState('');
   let [title, setTitle] = useState(0);
   let [글제목, 글제목변경] = useState( ['남자코트 추천', '강남 우동맛집', '파이썬 독학'] );
   let [따봉, 따봉변경] = useState([0,0,0]);
@@ -22,10 +23,10 @@ function App(){
       <button>정렬</button>
 
       <button onClick={ ()=>{ 
-      let copy = [...글제목];
-      copy[0] = '여자코트 추천';
-      글제목변경(copy)
-    } }> 수정버튼 </button>
+        let copy = [...글제목];
+        copy[0] = '여자코트 추천';
+        글제목변경(copy)
+      } }> 수정버튼 </button>
 
       <button onClick={ ()=>{ 
         let copy = [...글제목];
@@ -50,24 +51,43 @@ function App(){
         글제목.map(function(a, i){
           return (
             <div className="list" key={i}>
-              <h4 onClick={ ()=>{ setModal(!modal); setTitle(i);} }>   {/*모달창도 띄우고 setTitle로 title도 변경*/}
+              <h4 onClick={ ()=>{ setModal(!modal); setTitle(i);} }>   {/*모달창도 띄우고 setTitle로 title도 변경. i번째를 누르면 title이 i로 바뀜*/}
                 { 글제목[i] } 
-                <span onClick={ ()=>{ 
+                <span onClick={ (e)=>{ e.stopPropagation();
                   let copy = [...따봉];
                   copy[i] = copy[i] + 1;
                   따봉변경(copy)  
                 }}>👍</span> {따봉[i]} 
               </h4>
               <p>2월 18일 발행</p>
+              <button onClick={()=>{ 
+                let copy = [...글제목];
+                copy.splice(i, 1);
+                글제목변경(copy);
+              }}>삭제</button>
             </div> 
           )
         }) 
       }
 
+      <input onChange={(e)=>{ 
+        입력값변경(e.target.value) 
+        console.log(입력값)
+      }} />
+
       {/* <button onClick={ ()=>{ setModal(true) } }> {글제목[0]} </button> */}
       { 
          modal == true ? <Modal 작명={글제목} color='yellow' 글제목변경={글제목변경} title={title}></Modal> : null
       }
+
+      <div>
+        <input onChange={ (e)=>{ 입력값변경(e.target.value) } } />
+        <button onClick={()=>{ 
+          let copy = [...글제목];
+          copy.unshift(입력값);
+          글제목변경(copy)
+        }}>글발행</button>
+      </div>
 
     </div>
   )
